@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct CollectedArtist: Hashable, Identifiable {
+    let id = UUID()
+
+    //var id: ObjectIdentifier
+    
+    let contract: String
+    let name: String
+    let collectedNumber: String
+}

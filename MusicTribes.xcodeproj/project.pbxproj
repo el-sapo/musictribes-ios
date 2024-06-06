@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
+		0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
 		0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579622BF6F995006F1498 /* MusicTribesApp.swift */; };
 		0CE579652BF6F995006F1498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579642BF6F995006F1498 /* ContentView.swift */; };
 		0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE579662BF6F997006F1498 /* Assets.xcassets */; };
 		0CE5796B2BF6F997006F1498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5796A2BF6F997006F1498 /* Preview Assets.xcassets */; };
+		0CE579772BF7049C006F1498 /* CollectorMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579762BF7049C006F1498 /* CollectorMainView.swift */; };
+		0CE579792BF7085E006F1498 /* CollectorItemCrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579782BF7085E006F1498 /* CollectorItemCrateView.swift */; };
+		0CE5797B2BF70A75006F1498 /* CollectorGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */; };
+		0CE5797D2BF70F47006F1498 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797C2BF70F47006F1498 /* MockData.swift */; };
+		0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */; };
+		0CE579812BF70F68006F1498 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579802BF70F68006F1498 /* Artist.swift */; };
+		0CE579832BF70F70006F1498 /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579822BF70F70006F1498 /* Collector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
+		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
 		0CE5795F2BF6F995006F1498 /* MusicTribes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTribes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE579622BF6F995006F1498 /* MusicTribesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesApp.swift; sourceTree = "<group>"; };
 		0CE579642BF6F995006F1498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CE579662BF6F997006F1498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE579682BF6F997006F1498 /* MusicTribes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicTribes.entitlements; sourceTree = "<group>"; };
 		0CE5796A2BF6F997006F1498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0CE579762BF7049C006F1498 /* CollectorMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorMainView.swift; sourceTree = "<group>"; };
+		0CE579782BF7085E006F1498 /* CollectorItemCrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorItemCrateView.swift; sourceTree = "<group>"; };
+		0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorGridView.swift; sourceTree = "<group>"; };
+		0CE5797C2BF70F47006F1498 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedArtist.swift; sourceTree = "<group>"; };
+		0CE579802BF70F68006F1498 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		0CE579822BF70F70006F1498 /* Collector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +70,9 @@
 		0CE579612BF6F995006F1498 /* MusicTribes */ = {
 			isa = PBXGroup;
 			children = (
+				0CE579732BF6FA4D006F1498 /* Domain */,
+				0CE579722BF6FA44006F1498 /* Data */,
+				0CE579712BF6FA3B006F1498 /* UI */,
 				0CE579622BF6F995006F1498 /* MusicTribesApp.swift */,
 				0CE579642BF6F995006F1498 /* ContentView.swift */,
 				0CE579662BF6F997006F1498 /* Assets.xcassets */,
@@ -67,6 +88,52 @@
 				0CE5796A2BF6F997006F1498 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0CE579712BF6FA3B006F1498 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0CE579752BF702E5006F1498 /* Collector */,
+				0CE579742BF702DC006F1498 /* Artist */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0CE579722BF6FA44006F1498 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0CE5797C2BF70F47006F1498 /* MockData.swift */,
+				0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */,
+				0CE579802BF70F68006F1498 /* Artist.swift */,
+				0CE579822BF70F70006F1498 /* Collector.swift */,
+				0C5E6EA12C060E3C003C577B /* CollectedItem.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0CE579732BF6FA4D006F1498 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0CE579742BF702DC006F1498 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		0CE579752BF702E5006F1498 /* Collector */ = {
+			isa = PBXGroup;
+			children = (
+				0CE579762BF7049C006F1498 /* CollectorMainView.swift */,
+				0CE579782BF7085E006F1498 /* CollectorItemCrateView.swift */,
+				0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */,
+			);
+			path = Collector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +206,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE579792BF7085E006F1498 /* CollectorItemCrateView.swift in Sources */,
+				0CE5797D2BF70F47006F1498 /* MockData.swift in Sources */,
+				0CE5797B2BF70A75006F1498 /* CollectorGridView.swift in Sources */,
+				0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */,
+				0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */,
+				0CE579772BF7049C006F1498 /* CollectorMainView.swift in Sources */,
+				0CE579832BF70F70006F1498 /* Collector.swift in Sources */,
 				0CE579652BF6F995006F1498 /* ContentView.swift in Sources */,
+				0CE579812BF70F68006F1498 /* Artist.swift in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
+				0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,10 +346,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicTribes/Preview Content\"";
-				DEVELOPMENT_TEAM = 3QYW937A2Z;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicTribes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -282,17 +360,18 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictribes.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,10 +387,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicTribes/Preview Content\"";
-				DEVELOPMENT_TEAM = 3QYW937A2Z;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicTribes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -320,17 +401,18 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictribes.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
