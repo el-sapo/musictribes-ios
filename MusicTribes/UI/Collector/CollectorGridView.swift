@@ -16,12 +16,14 @@ struct CollectorGridView: View {
     let gridSeparation = 20.0
     
     var body: some View {
+        GeometryReader { geometry in
             ScrollView {
-                GeometryReader { geometry in
                 LazyVGrid(columns: columns, spacing: 20, pinnedViews: .sectionHeaders ,content: {
                     Section {
                         ForEach(gridData) { crate in
-                            CollectorItemCrateView(collectorCrate: crate, collectionCrateItems: MockData.collectedItems)
+                            CollectorItemCrateView(
+                                collectorCrate: crate,
+                                collectionCrateItems: crate.collectedItems)
                                 .frame(
                                     width: ((geometry.size.width / 2) - gridSeparation),
                                     height: geometry.size.width / 2 + 40.0

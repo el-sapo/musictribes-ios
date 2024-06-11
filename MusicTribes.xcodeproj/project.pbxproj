@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
 		0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
+		0C684BA52C12C139000E1BF7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA42C12C139000E1BF7 /* SDWebImage */; };
+		0C684BA72C12C139000E1BF7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */; };
+		0C684BAA2C12C1F3000E1BF7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA92C12C1F3000E1BF7 /* SDWebImageSwiftUI */; };
 		0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579622BF6F995006F1498 /* MusicTribesApp.swift */; };
 		0CE579652BF6F995006F1498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579642BF6F995006F1498 /* ContentView.swift */; };
 		0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE579662BF6F997006F1498 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */; };
 		0CE579812BF70F68006F1498 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579802BF70F68006F1498 /* Artist.swift */; };
 		0CE579832BF70F70006F1498 /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579822BF70F70006F1498 /* Collector.swift */; };
+		0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */; };
+		0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
+		0CFE1CB92C12ACFF00211BBD /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE1CB82C12ACFF00211BBD /* artists.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,9 @@
 		0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedArtist.swift; sourceTree = "<group>"; };
 		0CE579802BF70F68006F1498 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0CE579822BF70F70006F1498 /* Collector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
+		0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		0CF84EFF2C11778A00453EAF /* Color+MT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+MT.swift"; sourceTree = "<group>"; };
+		0CFE1CB82C12ACFF00211BBD /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C684BAA2C12C1F3000E1BF7 /* SDWebImageSwiftUI in Frameworks */,
+				0C684BA72C12C139000E1BF7 /* SDWebImageMapKit in Frameworks */,
+				0C684BA52C12C139000E1BF7 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +105,8 @@
 		0CE579712BF6FA3B006F1498 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0CF84EFE2C11772600453EAF /* Design */,
+				0CF84EFB2C11730500453EAF /* MusicPlayer */,
 				0CE579752BF702E5006F1498 /* Collector */,
 				0CE579742BF702DC006F1498 /* Artist */,
 			);
@@ -102,6 +116,7 @@
 		0CE579722BF6FA44006F1498 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0CFE1CB82C12ACFF00211BBD /* artists.json */,
 				0CE5797C2BF70F47006F1498 /* MockData.swift */,
 				0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */,
 				0CE579802BF70F68006F1498 /* Artist.swift */,
@@ -136,6 +151,22 @@
 			path = Collector;
 			sourceTree = "<group>";
 		};
+		0CF84EFB2C11730500453EAF /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		0CF84EFE2C11772600453EAF /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				0CF84EFF2C11778A00453EAF /* Color+MT.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +183,11 @@
 			dependencies = (
 			);
 			name = MusicTribes;
+			packageProductDependencies = (
+				0C684BA42C12C139000E1BF7 /* SDWebImage */,
+				0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */,
+				0C684BA92C12C1F3000E1BF7 /* SDWebImageSwiftUI */,
+			);
 			productName = MusicTribes;
 			productReference = 0CE5795F2BF6F995006F1498 /* MusicTribes.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +216,10 @@
 				Base,
 			);
 			mainGroup = 0CE579562BF6F995006F1498;
+			packageReferences = (
+				0C684BA32C12C139000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				0C684BA82C12C1F3000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 0CE579602BF6F995006F1498 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE5796B2BF6F997006F1498 /* Preview Assets.xcassets in Resources */,
+				0CFE1CB92C12ACFF00211BBD /* artists.json in Resources */,
 				0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +256,10 @@
 				0CE579832BF70F70006F1498 /* Collector.swift in Sources */,
 				0CE579652BF6F995006F1498 /* ContentView.swift in Sources */,
 				0CE579812BF70F68006F1498 /* Artist.swift in Sources */,
+				0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
 				0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */,
+				0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -330,6 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -441,6 +486,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C684BA32C12C139000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.3;
+			};
+		};
+		0C684BA82C12C1F3000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C684BA42C12C139000E1BF7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C684BA32C12C139000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C684BA32C12C139000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		0C684BA92C12C1F3000E1BF7 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C684BA82C12C1F3000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0CE579572BF6F995006F1498 /* Project object */;
 }

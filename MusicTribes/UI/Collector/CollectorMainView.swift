@@ -9,15 +9,11 @@ import SwiftUI
 
 struct CollectorMainView: View {
     var body: some View {
-        ZStack {
-                Spacer(minLength: 40)
-                CollectorGridView(
-                    gridData: MockData.collectedArtists
-                )
-            VStack {
-                CollectorTitleView(title: "elsapo.eth")
-                Spacer()
-            }
+        VStack {
+            CollectorGridView(
+                gridData: MockData.loadFromFile()
+                    )
+            MusicPlayerView()
         }
         .padding(EdgeInsets(top: 1, leading: 3, bottom: 0, trailing: 3))
     }

@@ -9,10 +9,19 @@ import Foundation
 
 struct CollectedArtist: Hashable, Identifiable {
     let id = UUID()
-
-    //var id: ObjectIdentifier
-    
     let contract: String
     let name: String
     let collectedNumber: String
+    var collectedItems: [CollectedItem] = []
+
+    static func == (lhs: CollectedArtist, rhs: CollectedArtist) -> Bool {
+        return lhs.contract == rhs.contract && lhs.name == rhs.name && lhs.collectedNumber == rhs.collectedNumber && lhs.collectedItems == rhs.collectedItems
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(contract)
+        hasher.combine(name)
+        hasher.combine(collectedNumber)
+        hasher.combine(collectedItems)
+    }
 }
