@@ -23,7 +23,9 @@ struct CollectorGridView: View {
                         ForEach(gridData) { crate in
                             CollectorItemCrateView(
                                 collectorCrate: crate,
-                                collectionCrateItems: crate.collectedItems)
+                                collectionCrateItems: crate.collectedItems,
+                                crateConfig: CrateViewConfig()
+                            )
                                 .frame(
                                     width: ((geometry.size.width / 2) - gridSeparation),
                                     height: geometry.size.width / 2 + 40.0

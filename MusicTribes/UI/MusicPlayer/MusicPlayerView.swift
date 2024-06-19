@@ -8,27 +8,37 @@
 import SwiftUI
 
 struct MusicPlayerView: View {
+    @State var count: Int = 0
+
     var body: some View {
-        HStack {
-            Button(action: {
-                print("play!")
-            }) {
-                Image(systemName: "play.circle")
-                    .resizable()
-                    .frame(width: 35, height: 35)
-                    .foregroundColor(Color.customOrange)
+        ZStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    print("play!")
+                }) {
+                    Image(systemName: "play.circle")
+                        .resizable()
+                        .frame(width: 35, height: 35)
+                        .foregroundColor(Color.customOrange)
+                        .symbolEffect(.breathe.plain.byLayer)
+                }
+                Spacer()
             }
-            Spacer()
-            Button(action: {
-                print("list!")
-            }) {
-                Image(systemName: "text.line.first.and.arrowtriangle.forward")
-                    .resizable()
-                    .frame(width: 35, height: 30)
-                    .foregroundColor(Color.customOrange)
+            HStack {
+                Spacer()
+                Button(action: {
+                    print("list!")
+                }) {
+                    Image(systemName: "eject")
+                        .resizable()
+                        .frame(width: 35, height: 30)
+                        .foregroundColor(Color.customOrange)
+                        .symbolEffect(.breathe.plain.byLayer)
+                }
+                .padding(.trailing, 20.0)
             }
-        }.frame(minHeight: 40.0, alignment: .leading)
-            .padding()
+        }
     }
 }
 
