@@ -15,11 +15,8 @@ struct ItemMenubar: View {
                 print("play!")
             }) {
                 Image(systemName: "play")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color.customOrange)
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
                     .symbolEffect(.breathe.plain.byLayer)
             }
             Spacer()
@@ -27,11 +24,8 @@ struct ItemMenubar: View {
                 print("add")
             }) {
                 Image(systemName: "plus")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color.customOrange)
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
                     .symbolEffect(.breathe.plain.byLayer)
             }
             Spacer()
@@ -39,23 +33,17 @@ struct ItemMenubar: View {
                 print("share")
             }) {
                 Image(systemName: "square.and.arrow.up")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color.customOrange)
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
                     .symbolEffect(.breathe.plain.byLayer)
             }
             Spacer()
             Button(action: {
                 print("buy")
             }) {
-                Image(systemName: "cart")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color.customOrange)
+                Image(systemName: "sparkles")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
                     .symbolEffect(.breathe.plain.byLayer)
             }
             Spacer()

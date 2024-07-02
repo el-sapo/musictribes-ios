@@ -12,6 +12,10 @@
 		0C684BA52C12C139000E1BF7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA42C12C139000E1BF7 /* SDWebImage */; };
 		0C684BA72C12C139000E1BF7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */; };
 		0C684BAA2C12C1F3000E1BF7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA92C12C1F3000E1BF7 /* SDWebImageSwiftUI */; };
+		0C6E25A92C24C2F100A7256D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */; };
+		0C6E25AA2C24C2F100A7256D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */; };
+		0C6E25AC2C24C33700A7256D /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */; };
+		0C6E25AD2C24C33700A7256D /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */; };
 		0C960DE12C22616C006CB1A6 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE02C226161006CB1A6 /* CustomAnimations.swift */; };
 		0C960DE22C22616C006CB1A6 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE02C226161006CB1A6 /* CustomAnimations.swift */; };
 		0C960DE42C2261FB006CB1A6 /* BackgroundMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE32C2261EA006CB1A6 /* BackgroundMesh.swift */; };
@@ -31,6 +35,36 @@
 		0CA60A9E2C21400D00FA31F4 /* CollectorItemCrateVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */; };
 		0CA60AA02C2145F200FA31F4 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */; };
 		0CA60AA12C2145F200FA31F4 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */; };
+		0CAB8CBD2C2D075F008061C2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */; };
+		0CAB8CBE2C2D075F008061C2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */; };
+		0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */; };
+		0CAB8CC22C2D092A008061C2 /* CustomEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */; };
+		0CC33A5C2C24607B00AA5D59 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */; };
+		0CC33A5D2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */; };
+		0CC33A5E2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */; };
+		0CC33A5F2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A522C24607B00AA5D59 /* Gotham-Bold.otf */; };
+		0CC33A602C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */; };
+		0CC33A612C24607B00AA5D59 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A552C24607B00AA5D59 /* Gotham-Medium.otf */; };
+		0CC33A622C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */; };
+		0CC33A632C24607B00AA5D59 /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */; };
+		0CC33A642C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A562C24607B00AA5D59 /* Gotham-ThinItalic.otf */; };
+		0CC33A652C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A592C24607B00AA5D59 /* Gotham-XLightItalic.otf */; };
+		0CC33A662C24607B00AA5D59 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */; };
+		0CC33A672C24607B00AA5D59 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */; };
+		0CC33A682C24607B00AA5D59 /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */; };
+		0CC33A692C24607B00AA5D59 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */; };
+		0CC33A6A2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */; };
+		0CC33A6B2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */; };
+		0CC33A6C2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A522C24607B00AA5D59 /* Gotham-Bold.otf */; };
+		0CC33A6D2C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */; };
+		0CC33A6E2C24607B00AA5D59 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A552C24607B00AA5D59 /* Gotham-Medium.otf */; };
+		0CC33A6F2C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */; };
+		0CC33A702C24607B00AA5D59 /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */; };
+		0CC33A712C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A562C24607B00AA5D59 /* Gotham-ThinItalic.otf */; };
+		0CC33A722C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A592C24607B00AA5D59 /* Gotham-XLightItalic.otf */; };
+		0CC33A732C24607B00AA5D59 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */; };
+		0CC33A742C24607B00AA5D59 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */; };
+		0CC33A752C24607B00AA5D59 /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */; };
 		0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579622BF6F995006F1498 /* MusicTribesApp.swift */; };
 		0CE579652BF6F995006F1498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579642BF6F995006F1498 /* ContentView.swift */; };
 		0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE579662BF6F997006F1498 /* Assets.xcassets */; };
@@ -44,6 +78,8 @@
 		0CE579832BF70F70006F1498 /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579822BF70F70006F1498 /* Collector.swift */; };
 		0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */; };
 		0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
+		0CF9DC5A2C232BED00701E6F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9DC592C232BEA00701E6F /* Utils.swift */; };
+		0CF9DC5B2C232BED00701E6F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9DC592C232BEA00701E6F /* Utils.swift */; };
 		0CFE1CB92C12ACFF00211BBD /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE1CB82C12ACFF00211BBD /* artists.json */; };
 		0CFE390A2C1FC30B002A0BD5 /* MusicTribesSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE39092C1FC30B002A0BD5 /* MusicTribesSApp.swift */; };
 		0CFE390C2C1FC30B002A0BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE390B2C1FC30B002A0BD5 /* ContentView.swift */; };
@@ -85,6 +121,8 @@
 /* Begin PBXFileReference section */
 		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
+		0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		0C960DE02C226161006CB1A6 /* CustomAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
 		0C960DE32C2261EA006CB1A6 /* BackgroundMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMesh.swift; sourceTree = "<group>"; };
 		0C960DE62C227F74006CB1A6 /* Ripple.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ripple.metal; sourceTree = "<group>"; };
@@ -93,6 +131,22 @@
 		0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonAssets.xcassets; sourceTree = "<group>"; };
 		0CA60A992C21294B00FA31F4 /* CommunityHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHomeView.swift; sourceTree = "<group>"; };
 		0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
+		0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CustomEffects.metal; sourceTree = "<group>"; };
+		0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham BoldItalic.otf"; sourceTree = "<group>"; };
+		0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham MediumItalic.otf"; sourceTree = "<group>"; };
+		0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Black.otf"; sourceTree = "<group>"; };
+		0CC33A522C24607B00AA5D59 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BookItalic.otf"; sourceTree = "<group>"; };
+		0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		0CC33A552C24607B00AA5D59 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		0CC33A562C24607B00AA5D59 /* Gotham-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-ThinItalic.otf"; sourceTree = "<group>"; };
+		0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-UltraItalic.otf"; sourceTree = "<group>"; };
+		0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-XLight.otf"; sourceTree = "<group>"; };
+		0CC33A592C24607B00AA5D59 /* Gotham-XLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-XLightItalic.otf"; sourceTree = "<group>"; };
+		0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
+		0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBook.ttf; sourceTree = "<group>"; };
+		0CC33A762C2466BB00AA5D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0CE5795F2BF6F995006F1498 /* MusicTribes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTribes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE579622BF6F995006F1498 /* MusicTribesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesApp.swift; sourceTree = "<group>"; };
 		0CE579642BF6F995006F1498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +162,7 @@
 		0CE579822BF70F70006F1498 /* Collector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
 		0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		0CF84EFF2C11778A00453EAF /* Color+MT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+MT.swift"; sourceTree = "<group>"; };
+		0CF9DC592C232BEA00701E6F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0CFE1CB82C12ACFF00211BBD /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 		0CFE39072C1FC30B002A0BD5 /* MusicTribesS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTribesS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFE39092C1FC30B002A0BD5 /* MusicTribesSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesSApp.swift; sourceTree = "<group>"; };
@@ -168,9 +223,56 @@
 			path = Community;
 			sourceTree = "<group>";
 		};
+		0CAB8CBF2C2D0907008061C2 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				0C960DE62C227F74006CB1A6 /* Ripple.metal */,
+				0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		0CB63A332C3390EC0086707C /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */,
+				0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */,
+			);
+			path = Toolbox;
+			sourceTree = "<group>";
+		};
+		0CC33A4D2C24605800AA5D59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CC33A4E2C24606900AA5D59 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0CC33A4E2C24606900AA5D59 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */,
+				0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */,
+				0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */,
+				0CC33A522C24607B00AA5D59 /* Gotham-Bold.otf */,
+				0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */,
+				0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */,
+				0CC33A552C24607B00AA5D59 /* Gotham-Medium.otf */,
+				0CC33A562C24607B00AA5D59 /* Gotham-ThinItalic.otf */,
+				0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */,
+				0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */,
+				0CC33A592C24607B00AA5D59 /* Gotham-XLightItalic.otf */,
+				0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */,
+				0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0CE579562BF6F995006F1498 = {
 			isa = PBXGroup;
 			children = (
+				0CC33A4D2C24605800AA5D59 /* Resources */,
 				0CE579612BF6F995006F1498 /* MusicTribes */,
 				0CFE39082C1FC30B002A0BD5 /* MusicTribesS */,
 				0CFE39192C1FC30F002A0BD5 /* MusicTribesSTests */,
@@ -194,6 +296,7 @@
 		0CE579612BF6F995006F1498 /* MusicTribes */ = {
 			isa = PBXGroup;
 			children = (
+				0CF9DC582C232BE300701E6F /* Helpers */,
 				0CE579732BF6FA4D006F1498 /* Domain */,
 				0CE579722BF6FA44006F1498 /* Data */,
 				0CE579712BF6FA3B006F1498 /* UI */,
@@ -218,10 +321,10 @@
 			isa = PBXGroup;
 			children = (
 				0CA60A982C21293200FA31F4 /* Community */,
-				0CF84EFE2C11772600453EAF /* Design */,
 				0CF84EFB2C11730500453EAF /* MusicPlayer */,
 				0CE579752BF702E5006F1498 /* Collector */,
 				0CE579742BF702DC006F1498 /* Artist */,
+				0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -274,7 +377,7 @@
 		0CF84EFE2C11772600453EAF /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				0C960DE62C227F74006CB1A6 /* Ripple.metal */,
+				0CAB8CBF2C2D0907008061C2 /* Metal */,
 				0C960DE32C2261EA006CB1A6 /* BackgroundMesh.swift */,
 				0C960DE02C226161006CB1A6 /* CustomAnimations.swift */,
 				0CF84EFF2C11778A00453EAF /* Color+MT.swift */,
@@ -287,9 +390,20 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		0CF9DC582C232BE300701E6F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0CB63A332C3390EC0086707C /* Toolbox */,
+				0CF9DC592C232BEA00701E6F /* Utils.swift */,
+				0CF84EFE2C11772600453EAF /* Design */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		0CFE39082C1FC30B002A0BD5 /* MusicTribesS */ = {
 			isa = PBXGroup;
 			children = (
+				0CC33A762C2466BB00AA5D59 /* Info.plist */,
 				0CFE39092C1FC30B002A0BD5 /* MusicTribesSApp.swift */,
 				0CFE390B2C1FC30B002A0BD5 /* ContentView.swift */,
 				0CFE390D2C1FC30D002A0BD5 /* Assets.xcassets */,
@@ -471,6 +585,19 @@
 				0CE5796B2BF6F997006F1498 /* Preview Assets.xcassets in Resources */,
 				0C960DF12C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */,
 				0CFE1CB92C12ACFF00211BBD /* artists.json in Resources */,
+				0CC33A5C2C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
+				0CC33A5D2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,
+				0CC33A5E2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */,
+				0CC33A5F2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */,
+				0CC33A602C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */,
+				0CC33A612C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
+				0CC33A622C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */,
+				0CC33A632C24607B00AA5D59 /* Gotham-Black.otf in Resources */,
+				0CC33A642C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */,
+				0CC33A652C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */,
+				0CC33A662C24607B00AA5D59 /* GothamBold.ttf in Resources */,
+				0CC33A672C24607B00AA5D59 /* Gotham-BookItalic.otf in Resources */,
+				0CC33A682C24607B00AA5D59 /* GothamBook.ttf in Resources */,
 				0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +609,19 @@
 				0CFE39112C1FC30D002A0BD5 /* Preview Assets.xcassets in Resources */,
 				0C960DF02C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */,
 				0CFE39322C1FDA60002A0BD5 /* artists.json in Resources */,
+				0CC33A692C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
+				0CC33A6A2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,
+				0CC33A6B2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */,
+				0CC33A6C2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */,
+				0CC33A6D2C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */,
+				0CC33A6E2C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
+				0CC33A6F2C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */,
+				0CC33A702C24607B00AA5D59 /* Gotham-Black.otf in Resources */,
+				0CC33A712C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */,
+				0CC33A722C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */,
+				0CC33A732C24607B00AA5D59 /* GothamBold.ttf in Resources */,
+				0CC33A742C24607B00AA5D59 /* Gotham-BookItalic.otf in Resources */,
+				0CC33A752C24607B00AA5D59 /* GothamBook.ttf in Resources */,
 				0CFE390E2C1FC30D002A0BD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,18 +654,23 @@
 				0C960DEA2C228619006CB1A6 /* CustomButton.swift in Sources */,
 				0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */,
 				0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */,
+				0CF9DC5B2C232BED00701E6F /* Utils.swift in Sources */,
 				0CE579772BF7049C006F1498 /* CollectorMainView.swift in Sources */,
 				0CA60AA02C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,
+				0C6E25AC2C24C33700A7256D /* ViewExtensions.swift in Sources */,
 				0C960DE52C2261FB006CB1A6 /* BackgroundMesh.swift in Sources */,
 				0CE579832BF70F70006F1498 /* Collector.swift in Sources */,
 				0CE579652BF6F995006F1498 /* ContentView.swift in Sources */,
 				0CE579812BF70F68006F1498 /* Artist.swift in Sources */,
+				0C6E25AA2C24C2F100A7256D /* ViewModifiers.swift in Sources */,
 				0C960DE22C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
 				0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */,
+				0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
 				0C960DE82C227F74006CB1A6 /* Ripple.metal in Sources */,
 				0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */,
 				0C960DEE2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
+				0CAB8CBD2C2D075F008061C2 /* LoaderView.swift in Sources */,
 				0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */,
 				0CA60A9A2C21294B00FA31F4 /* CommunityHomeView.swift in Sources */,
 			);
@@ -535,7 +680,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6E25AD2C24C33700A7256D /* ViewExtensions.swift in Sources */,
 				0CA60A9D2C21400300FA31F4 /* Color+MT.swift in Sources */,
+				0CAB8CBE2C2D075F008061C2 /* LoaderView.swift in Sources */,
 				0CFE390C2C1FC30B002A0BD5 /* ContentView.swift in Sources */,
 				0C960DEB2C228619006CB1A6 /* CustomButton.swift in Sources */,
 				0C960DE72C227F74006CB1A6 /* Ripple.metal in Sources */,
@@ -550,9 +697,12 @@
 				0CA60A9E2C21400D00FA31F4 /* CollectorItemCrateVMProtocol.swift in Sources */,
 				0CFE39362C1FDA60002A0BD5 /* Collector.swift in Sources */,
 				0CFE39372C1FDA60002A0BD5 /* CollectedArtist.swift in Sources */,
+				0C6E25A92C24C2F100A7256D /* ViewModifiers.swift in Sources */,
+				0CF9DC5A2C232BED00701E6F /* Utils.swift in Sources */,
 				0C960DE42C2261FB006CB1A6 /* BackgroundMesh.swift in Sources */,
 				0C960DE12C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
 				0CA60A9C2C213FC200FA31F4 /* MusicPlayerView.swift in Sources */,
+				0CAB8CC22C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CFE39312C1FDA59002A0BD5 /* MusicTribesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,6 +949,8 @@
 				DEVELOPMENT_TEAM = 3QYW937A2Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicTribesS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -830,6 +982,8 @@
 				DEVELOPMENT_TEAM = 3QYW937A2Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicTribesS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

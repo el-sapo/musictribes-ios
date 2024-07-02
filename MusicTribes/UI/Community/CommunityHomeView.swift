@@ -24,14 +24,18 @@ struct CommunityHomeView: View {
             BackgroundMesh()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    Spacer()
+                    // add gradient animation with orange to the logo
+                    Image("logo-small")
+                        .resizable()
+                        .scaledToFit()
+                        .aspectRatio(contentMode: .fit)
                         .frame(height: 50.0)
-                    
+                        .padding(.bottom, 30.0)
+                        .opacity(0.7)
                     if isVisible {
                         Text("DANC3 Mixtape")
                             .customAttribute(EmphasisAttribute())
-                            .font(.largeTitle)
-                            .fontWeight(.black)
+                            .myFont(style: .big, size: 32.0)
                             .scaledToFit()
                             .foregroundColor(.white)
                             .transition(TextTransition())
@@ -46,13 +50,16 @@ struct CommunityHomeView: View {
                             showTextBottom: true,
                             showCount: false,
                             crateOffset: 20.0,
-                            maxItems: 5
+                            maxItems: 3
                         )
                     )
-                    .frame(height: pageHeight / 2)
+                    .frame(
+                        width: UIScreen.main.bounds.width,
+                        height: UIScreen.main.bounds.width
+                    )
+                    .background(Color.green)
                     .clipped()
                     ItemMenubar()
-                        .opacity(0.7)
                         .frame(height: 40.0)
                     Spacer()
                 }
@@ -69,6 +76,7 @@ struct CommunityHomeView: View {
             VStack {
                 Spacer()
                 MusicPlayerView()
+                    .opacity(0.0)
                 Spacer()
                     .frame(height: 40.0)
             }

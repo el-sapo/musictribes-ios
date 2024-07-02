@@ -44,14 +44,10 @@ struct CollectorItemCrateView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            
             VStack(alignment: .leading) {
                 if crateConfig.showTextTop {
                     Text("\(collectorCrate.name) (\(collectorCrate.collectedNumber))")
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                        .scaledToFit()
-                        .minimumScaleFactor(0.5)
+                        .myFont(style: .bold, size: 20.0)
                         .frame(minHeight: 20.0)
                 }
                 CarouselView(
@@ -60,7 +56,11 @@ struct CollectorItemCrateView: View {
                     maxWidth: .constant(geometry.size.width),
                     offsetBetweenImages: crateConfig.crateOffset,
                     maxItems: crateConfig.maxItems
+                ).frame(
+                    width: geometry.size.width,
+                    height: geometry.size.width
                 )
+                .background(Color.red)
             }
         }
     }
@@ -99,19 +99,31 @@ struct CarouselView: View {
     @State var isVisible: Bool = false
     @State var counter: Int = 0
     @State var origin: CGPoint = .zero
+    
+    // images to show in the carousell
+    var imageCount: Int {
+        return allImages.count < maxItems ? allImages.count : maxItems
+    }
 
     private var images: [String] {
         var result: [String] = []
-        for i in 0..<maxItems {
-            let index = (currentIndex + i)
+        for i in 0..<imageCount {
+            let index = currentIndex + i
             if allImages.count > index {
                 result.append(allImages[index])
+            } else {
+                let newIndex = index - allImages.count
+                result.append(allImages[newIndex])
             }
         }
         return result
     }
     private var baseWidth: CGFloat {
-        return maxWidth - offsetBetweenImages * CGFloat(maxItems)
+        return maxWidth - offset * CGFloat(maxItems)
+    }
+    
+    var offset: CGFloat {
+        return maxWidth * 0.2 / CGFloat(maxItems)
     }
     
     var body: some View {
@@ -132,44 +144,33 @@ struct CarouselView: View {
                             // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
                         }
                         .indicator(.activity) // Activity Indicator
-                        .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                        .transition(.fade(duration: 0.1)) // Fade Transition with duration
                         .zIndex(self.zIndex(for: index))
                         .frame(
-                            width: self.frameSize(for: index),
-                            height: self.frameSize(for: index)
+                            width: baseWidth,
+                            height: baseWidth
                         )
                         .position(
                             x: offsetX(for: index),
                             y: offsetY(for: index)
                         )
-                        .clipped()
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 self.handleTap()
                             }
                         }
+                        .padding(.all, 0.0)
                         .onPressingChanged { point in
                             if let point {
                                 origin = point
                                 counter += 1
                             }
                         }
-                        .modifier(RippleEffect(at: origin, trigger: counter))
+                        .if(index == 0) { view in
+                            view.modifier(RippleEffect(at: origin, trigger: counter))
+                        }
                 }
-            }.frame(width: maxWidth, height: maxWidth, alignment: .bottomLeading)
-            if isVisible {
-                Text(allTitles[currentIndex])
-                    .customAttribute(EmphasisAttribute())
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .scaledToFit()
-                    .minimumScaleFactor(0.5)
-                    .frame(width: baseWidth, height: 30.0, alignment: .center)
-                    .foregroundColor(.white)
-                    .padding()
-                    .transition(TextTransition())
-            }
-
+            }.frame(width: baseWidth, height: baseWidth, alignment: .bottomLeading)
         }.frame(width: baseWidth, height: maxWidth + 40.0, alignment: .bottomLeading)
             .onAppear {
                 withAnimation {
@@ -178,51 +179,48 @@ struct CarouselView: View {
             }
     }
     
-    // Calculate frame size based on index
-        private func frameSize(for index: Int) -> CGFloat {
-            print(baseWidth)
+    private func frameSize(for index: Int) -> CGFloat {
             return baseWidth
-        }
-        
-        // Calculate Y offset based on index
-        private func offsetY(for index: Int) -> CGFloat {
-            var offset = maxWidth / 2
-            switch index {
-            case 0:
-                offset+=offsetBetweenImages
-            case 2:
-                offset-=offsetBetweenImages
-            default:
-                break
-            }
-            print("index \(index) offset \(offset)")
-            return offset
-        }
-    
-        // Calculate X offset based on index
-        private func offsetX(for index: Int) -> CGFloat {
-            var offset = maxWidth / 2
-            switch index {
-            case 0:
-                offset-=offsetBetweenImages
-            case 2:
-                offset+=offsetBetweenImages
-            default:
-                break
-            }
-            print("index \(index) offset \(offset)")
-            return offset
-        }
+    }
 
-        // Calculate zIndex based on index
-        private func zIndex(for index: Int) -> Double {
-            return Double(-index)
+    // Calculate Y offset based on index
+    private func offsetY(for index: Int) -> CGFloat {
+        var offset = baseWidth / 2
+        switch index {
+        case 0:
+            offset+=offsetBetweenImages
+        case 2:
+            offset-=offsetBetweenImages
+        default:
+            break
         }
-        
-        // Handle the tap gesture to move images
-        private func handleTap() {
-            currentIndex = (currentIndex + 1) % allImages.count
+        print("index \(index) offset \(offset)")
+        return offset
+    }
+
+    // Calculate X offset based on index
+    private func offsetX(for index: Int) -> CGFloat {
+        var offset = baseWidth / 2
+        switch index {
+        case 0:
+            offset-=offsetBetweenImages
+        case 2:
+            offset+=offsetBetweenImages
+        default:
+            break
         }
+        return offset
+    }
+
+    // Calculate zIndex based on index
+    private func zIndex(for index: Int) -> Double {
+        return Double(-index)
+    }
+    
+    // Handle the tap gesture to move images
+    private func handleTap() {
+        currentIndex = (currentIndex + 1) % allImages.count
+    }
 }
 
 struct CarouselScrollView: View {
@@ -264,20 +262,10 @@ struct CarouselScrollView: View {
                             .brightness(-distance / 400)
                             .blur(radius: -distance / 50)
                     }
-//                    .scrollTransition { content, phase in
-//                        content
-//                            .offset(y: phase.isIdentity ? 0 : 50)
-//                            .scaleEffect(
-//                                x: phase.isIdentity ? 1.0 : 0.5,
-//                                y: phase.isIdentity ? 1.0 : 0.5
-//                            )
-//                            .opacity(phase.isIdentity ? 1.0 : 0.1)
-//                    }
                 }
             }
         }
         .scrollTargetBehavior(.paging)
-        
     }
 }
 private let pageHeight: CGFloat = UIScreen.main.bounds.height

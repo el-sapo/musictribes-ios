@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isLoading: Bool = true
+
     var body: some View {
-        CommunityHomeView()
+        ZStack {
+            CommunityHomeView()
+            if isLoading {
+                LoaderView()
+                    .transition(.opacity)
+            }
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    isLoading = false
+                }
+            }
+        }
     }
 }
 

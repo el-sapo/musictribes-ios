@@ -28,15 +28,10 @@ struct CommunityDetailView: View {
                 image.resizable() // Control layout like SwiftUI.AsyncImage, you must use this modifier or the view will use the image bitmap size
                     .scaledToFit()
                     .aspectRatio(1, contentMode: .fit)
-                    .clipShape(Circle())
-                    .overlay(
-                        Circle()
-                            .frame(width: 25, height: 25)
-                            .blendMode(.destinationOut)
-                    )
-                    .compositingGroup()
+                    .cornerRadius(10.0)
             } placeholder: {
-                Circle().foregroundColor(.black)
+                Rectangle().foregroundColor(.black)
+                    .cornerRadius(10.0)
             }
             .onSuccess { image, data, cacheType in
                 // Success
@@ -45,11 +40,11 @@ struct CommunityDetailView: View {
             .indicator(.activity) // Activity Indicator
             .transition(.fade(duration: 0.5)) // Fade Transition with duration
             .clipped()
-            .frame(width: 150, height: 150, alignment: .top)
+            .frame(width: 130, height: 130, alignment: .top)
             .rotationEffect(rotationAngle)
             .onAppear(perform: startRotating)
             Spacer()
-                .frame(height: 20)
+                .frame(height: 30)
             Text("George Hooks")
                 .font(.largeTitle)
                 .fontWeight(.black)
@@ -60,15 +55,17 @@ struct CommunityDetailView: View {
                 .fontWeight(.black)
                 .scaledToFit()
                 .foregroundColor(.white)
-            ItemMenubar()
-                .opacity(0.7)
-                .frame(height: 40.0)
             Text(collectedItem.description!)
                 .fontWeight(.regular)
                 .foregroundColor(.white)
                 .padding(.all, 20.0)
                 .lineLimit(nil)
                 .transition(TextTransition())
+            Spacer()
+                .frame(height: 40.0)
+            ItemMenubar()
+                .opacity(0.7)
+                .frame(height: 40.0)
             Spacer()
         }
     }

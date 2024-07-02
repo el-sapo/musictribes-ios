@@ -79,6 +79,10 @@ func groupSongsByArtist(songs: [Song]) -> [CollectedArtist] {
                 description: song.description,
                 sourceUrl: song.songUrl
             )
+        }.sorted { $0.title < $1.title }
+        
+        for item in collectedItems {
+            print(item.title)
         }
         
         let collectedArtist = CollectedArtist(
