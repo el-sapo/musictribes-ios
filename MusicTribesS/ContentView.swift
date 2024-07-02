@@ -12,16 +12,14 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            CommunityHomeView()
+            let isNotLoading = Binding<Bool>(
+                        get: { !isLoading },
+                        set: { isLoading = !$0 }
+                    )
+            CommunityHomeView(isVisible: isNotLoading)
             if isLoading {
                 LoaderView()
                     .transition(.opacity)
-            }
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                withAnimation {
-                    isLoading = false
-                }
             }
         }
     }

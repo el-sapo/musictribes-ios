@@ -17,7 +17,7 @@ struct CommunityHomeView: View {
     @State private var currentPage: Int = 0
     private let pageHeight: CGFloat = UIScreen.main.bounds.height
     
-    @State var isVisible: Bool = false
+    @Binding var isVisible: Bool
 
     var body: some View {
         ZStack() {
@@ -25,13 +25,12 @@ struct CommunityHomeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     // add gradient animation with orange to the logo
-                    Image("logo-small")
-                        .resizable()
-                        .scaledToFit()
-                        .aspectRatio(contentMode: .fit)
+                    Spacer()
+                        .frame(height: 20.0)
+                    LogoView()
                         .frame(height: 50.0)
-                        .padding(.bottom, 30.0)
-                        .opacity(0.7)
+                        .padding(30.0)
+                        .opacity(0.3)
                     if isVisible {
                         Text("DANC3 Mixtape")
                             .customAttribute(EmphasisAttribute())
@@ -57,7 +56,6 @@ struct CommunityHomeView: View {
                         width: UIScreen.main.bounds.width,
                         height: UIScreen.main.bounds.width
                     )
-                    .background(Color.green)
                     .clipped()
                     ItemMenubar()
                         .frame(height: 40.0)
@@ -82,14 +80,18 @@ struct CommunityHomeView: View {
             }
         }
         .onAppear {
-            $isVisible.animation()
-            isVisible = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    $isVisible.animation()
+                    isVisible = true
+                }
+            }
         }
     }
 }
 
 #Preview {
-    CommunityHomeView()
+    CommunityHomeView(isVisible: .constant(true))
 }
 
 

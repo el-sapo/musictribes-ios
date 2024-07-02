@@ -60,7 +60,6 @@ struct CollectorItemCrateView: View {
                     width: geometry.size.width,
                     height: geometry.size.width
                 )
-                .background(Color.red)
             }
         }
     }
@@ -170,8 +169,8 @@ struct CarouselView: View {
                             view.modifier(RippleEffect(at: origin, trigger: counter))
                         }
                 }
-            }.frame(width: baseWidth, height: baseWidth, alignment: .bottomLeading)
-        }.frame(width: baseWidth, height: maxWidth + 40.0, alignment: .bottomLeading)
+            }.frame(width: baseWidth, height: baseWidth, alignment: .center)
+        }.frame(width: baseWidth, height: baseWidth, alignment: .center)
             .onAppear {
                 withAnimation {
                     isVisible = true
@@ -185,31 +184,21 @@ struct CarouselView: View {
 
     // Calculate Y offset based on index
     private func offsetY(for index: Int) -> CGFloat {
-        var offset = baseWidth / 2
-        switch index {
-        case 0:
-            offset+=offsetBetweenImages
-        case 2:
-            offset-=offsetBetweenImages
-        default:
-            break
-        }
-        print("index \(index) offset \(offset)")
-        return offset
+        let centerIndex = imageCount / 2
+        let newOffset = CGFloat(centerIndex - index) * offset
+        
+        // Adjust to center the images vertically
+        return newOffset + baseWidth / 2
     }
 
     // Calculate X offset based on index
     private func offsetX(for index: Int) -> CGFloat {
-        var offset = baseWidth / 2
-        switch index {
-        case 0:
-            offset-=offsetBetweenImages
-        case 2:
-            offset+=offsetBetweenImages
-        default:
-            break
-        }
-        return offset
+        let centerIndex = imageCount / 2
+        // Calculate offset for each index
+        let newOffset = CGFloat(index - centerIndex) * offset
+           
+        // Adjust base width to center the images
+        return newOffset + baseWidth / 2
     }
 
     // Calculate zIndex based on index

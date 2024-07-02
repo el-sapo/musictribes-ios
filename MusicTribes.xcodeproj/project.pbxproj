@@ -39,6 +39,8 @@
 		0CAB8CBE2C2D075F008061C2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */; };
 		0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */; };
 		0CAB8CC22C2D092A008061C2 /* CustomEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */; };
+		0CB63A352C33B2630086707C /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB63A342C33B2630086707C /* ViewHelpers.swift */; };
+		0CB63A362C33B2630086707C /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB63A342C33B2630086707C /* ViewHelpers.swift */; };
 		0CC33A5C2C24607B00AA5D59 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */; };
 		0CC33A5D2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */; };
 		0CC33A5E2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */; };
@@ -133,6 +135,7 @@
 		0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
 		0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CustomEffects.metal; sourceTree = "<group>"; };
+		0CB63A342C33B2630086707C /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 		0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham BoldItalic.otf"; sourceTree = "<group>"; };
 		0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham MediumItalic.otf"; sourceTree = "<group>"; };
 		0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Black.otf"; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 			children = (
 				0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */,
 				0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */,
+				0CB63A342C33B2630086707C /* ViewHelpers.swift */,
 			);
 			path = Toolbox;
 			sourceTree = "<group>";
@@ -668,6 +672,7 @@
 				0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
 				0C960DE82C227F74006CB1A6 /* Ripple.metal in Sources */,
+				0CB63A352C33B2630086707C /* ViewHelpers.swift in Sources */,
 				0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */,
 				0C960DEE2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
 				0CAB8CBD2C2D075F008061C2 /* LoaderView.swift in Sources */,
@@ -688,6 +693,7 @@
 				0C960DE72C227F74006CB1A6 /* Ripple.metal in Sources */,
 				0CFE390A2C1FC30B002A0BD5 /* MusicTribesSApp.swift in Sources */,
 				0CFE39332C1FDA60002A0BD5 /* CollectedItem.swift in Sources */,
+				0CB63A362C33B2630086707C /* ViewHelpers.swift in Sources */,
 				0CA60A9B2C2129E300FA31F4 /* CommunityHomeView.swift in Sources */,
 				0C960DED2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
 				0CFE39382C1FDA82002A0BD5 /* CollectorItemCrateView.swift in Sources */,
