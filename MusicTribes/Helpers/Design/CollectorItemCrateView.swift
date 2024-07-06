@@ -30,11 +30,13 @@ struct CrateViewConfig {
 }
 
 struct CollectorItemCrateView: View {
+    @EnvironmentObject private var vmCommunity: CommunityViewModel
+
     let collectorCrate: CollectedArtist
     let collectionCrateItems: [CollectedItem]
     let crateWidth: CGFloat = 150.0
     let crateConfig: CrateViewConfig
-    var crateTilte: String {
+    var crateTitle: String {
         var text = collectorCrate.name
         if crateConfig.showCount {
             text = text + " \(collectorCrate.collectedNumber)"
@@ -51,8 +53,8 @@ struct CollectorItemCrateView: View {
                         .frame(minHeight: 20.0)
                 }
                 CarouselView(
-                    allImages: .constant(collectorCrate.collectedItems.map { $0.image }),
-                    allTitles: .constant(collectorCrate.collectedItems.map { $0.title }),
+                    allImages: .constant(collectionCrateItems.map { $0.image }),
+                    allTitles: .constant(collectionCrateItems.map { $0.title }),
                     maxWidth: .constant(geometry.size.width),
                     offsetBetweenImages: crateConfig.crateOffset,
                     maxItems: crateConfig.maxItems
@@ -85,6 +87,8 @@ struct CollectorItemCrateView: View {
 
 
 struct CarouselView: View {
+    @EnvironmentObject private var vmCommunity: CommunityViewModel
+
     @Binding var allImages: [String]
     @Binding var allTitles: [String]
     @Binding var maxWidth: CGFloat
@@ -175,7 +179,13 @@ struct CarouselView: View {
                 withAnimation {
                     isVisible = true
                 }
-            }
+        }
+        .onReceive(vmCommunity.$currentItemIndex) { newValue in
+            self.currentIndex = newValue
+        }
+        .onChange(of: currentIndex) {
+            vmCommunity.currentItemIndex = currentIndex
+        }
     }
     
     private func frameSize(for index: Int) -> CGFloat {

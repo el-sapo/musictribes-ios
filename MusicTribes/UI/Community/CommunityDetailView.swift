@@ -9,7 +9,7 @@ import SwiftUI
 //import SDWebImage
 import SDWebImageSwiftUI
 
-struct CommunityDetailView: View {
+struct CommunityDetailView: View {    
     let collectedItem: CollectedItem = CollectedItem(
         image: "https://content.spinamp.xyz/image/upload/ipfs_image/QmXXNsLrQncxSpmA4NUhDtQ2U8GQbzKgxvn85zvW39pK1e",
         title: "Love Me",

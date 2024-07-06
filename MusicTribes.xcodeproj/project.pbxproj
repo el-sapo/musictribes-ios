@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
+		0C1D41402C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
+		0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
+		0C1D41472C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
+		0C1D41482C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
 		0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
 		0C684BA52C12C139000E1BF7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA42C12C139000E1BF7 /* SDWebImage */; };
 		0C684BA72C12C139000E1BF7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */; };
@@ -122,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
+		0C1D413F2C39B2DE004305DD /* danc3-songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "danc3-songs.json"; sourceTree = "<group>"; };
+		0C1D41462C39B49E004305DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
 		0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -217,6 +223,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1D41422C39B2EA004305DD /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0C1D413F2C39B2DE004305DD /* danc3-songs.json */,
+				0CFE1CB82C12ACFF00211BBD /* artists.json */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
 		0CA60A982C21293200FA31F4 /* Community */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,12 +351,13 @@
 		0CE579722BF6FA44006F1498 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0CFE1CB82C12ACFF00211BBD /* artists.json */,
+				0C1D41422C39B2EA004305DD /* mocks */,
 				0CE5797C2BF70F47006F1498 /* MockData.swift */,
 				0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */,
 				0CE579802BF70F68006F1498 /* Artist.swift */,
 				0CE579822BF70F70006F1498 /* Collector.swift */,
 				0C5E6EA12C060E3C003C577B /* CollectedItem.swift */,
+				0C1D41462C39B49E004305DD /* DataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -592,6 +608,7 @@
 				0CC33A5C2C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
 				0CC33A5D2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,
 				0CC33A5E2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */,
+				0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */,
 				0CC33A5F2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */,
 				0CC33A602C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */,
 				0CC33A612C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
@@ -616,6 +633,7 @@
 				0CC33A692C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
 				0CC33A6A2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,
 				0CC33A6B2C24607B00AA5D59 /* Gotham-XLight.otf in Resources */,
+				0C1D41402C39B2DE004305DD /* danc3-songs.json in Resources */,
 				0CC33A6C2C24607B00AA5D59 /* Gotham-Bold.otf in Resources */,
 				0CC33A6D2C24607B00AA5D59 /* Gotham MediumItalic.otf in Resources */,
 				0CC33A6E2C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
@@ -668,6 +686,7 @@
 				0CE579812BF70F68006F1498 /* Artist.swift in Sources */,
 				0C6E25AA2C24C2F100A7256D /* ViewModifiers.swift in Sources */,
 				0C960DE22C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
+				0C1D41482C39B49E004305DD /* DataManager.swift in Sources */,
 				0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */,
 				0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
@@ -696,6 +715,7 @@
 				0CB63A362C33B2630086707C /* ViewHelpers.swift in Sources */,
 				0CA60A9B2C2129E300FA31F4 /* CommunityHomeView.swift in Sources */,
 				0C960DED2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
+				0C1D41472C39B49E004305DD /* DataManager.swift in Sources */,
 				0CFE39382C1FDA82002A0BD5 /* CollectorItemCrateView.swift in Sources */,
 				0CFE39342C1FDA60002A0BD5 /* MockData.swift in Sources */,
 				0CA60AA12C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,

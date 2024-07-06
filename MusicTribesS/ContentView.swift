@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isLoading: Bool = true
+    @StateObject private var vm = HomeViewModel()
 
+    // add view model to handle hiding the loader
     var body: some View {
         ZStack {
-            let isNotLoading = Binding<Bool>(
-                        get: { !isLoading },
-                        set: { isLoading = !$0 }
-                    )
-            CommunityHomeView(isVisible: isNotLoading)
-            if isLoading {
+            CommunityHomeView()
+                .environmentObject(vm)
+            if vm.loading {
                 LoaderView()
                     .transition(.opacity)
+            }
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    vm.showLoader(false)
+                }
             }
         }
     }
@@ -27,4 +31,12 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+class HomeViewModel: ObservableObject {
+    @Published var loading: Bool = true
+    
+    func showLoader(_ show:Bool, animated: Bool = true) {
+        loading = show
+    }
 }
