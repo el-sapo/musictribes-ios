@@ -8,6 +8,10 @@
 import SwiftUI
 import Combine
 
+private struct UIConstants {
+    static let frameBorder = 5.0
+}
+
 struct CommunityHomeView: View {
     @EnvironmentObject private var vmHome: HomeViewModel
     @StateObject private var vmCommunity: CommunityViewModel = CommunityViewModel()
@@ -33,63 +37,82 @@ struct CommunityHomeView: View {
                         .frame(height: 50.0)
                         .padding(30.0)
                         .opacity(0.5)
-                    if !vmHome.loading {
-                        Text(vmCommunity.title)
-                            .customAttribute(EmphasisAttribute())
-                            .myFont(style: .big, size: 32.0)
-                            .scaledToFit()
-                            .foregroundColor(.accent)
-                            .transition(TextTransition())
-                            .animation(.default, value: !vmHome.loading)
-                    }
-                    Spacer()
-                        .frame(height: 20.0)
-                    if vmCommunity.data.count > 0 {
-                        CollectorItemCrateView(
-                            collectorCrate: vmCommunity.data[0],
-                            collectionCrateItems: vmCommunity.extractCollectedItems(),
-                            crateConfig: CrateViewConfig(
-                                showTextTop: false,
-                                showTextBottom: true,
-                                showCount: false,
-                                crateOffset: 20.0,
-                                maxItems: vmCommunity.data.count
-                            )
+                    VStack {
+                        if !vmHome.loading {
+                            Text(vmCommunity.title)
+                                .customAttribute(EmphasisAttribute())
+                                .myFont(style: .big, size: 32.0)
+                                .scaledToFit()
+                                .foregroundColor(.customCream)
+                                .transition(TextTransition())
+                                .animation(.default, value: !vmHome.loading)
+                                .myAnimatedGlow(color: .white)
+                                .padding(.top, 10.0)
+                        }
+                        VStack {
+                            if vmCommunity.data.count > 0 {
+                                CollectorItemCrateView(
+                                    collectorCrate: vmCommunity.data[0],
+                                    collectionCrateItems: vmCommunity.extractCollectedItems(),
+                                    crateConfig: CrateViewConfig(
+                                        showTextTop: false,
+                                        showTextBottom: true,
+                                        showCount: false,
+                                        crateOffset: 20.0,
+                                        maxItems: vmCommunity.data.count
+                                    )
+                                )
+                                .environmentObject(vmCommunity)
+                                .frame(
+                                    width: UIScreen.main.bounds.width - UIConstants.frameBorder * 4,
+                                    height: UIScreen.main.bounds.width - UIConstants.frameBorder * 4
+                                ).offset(CGSize(width: UIConstants.frameBorder, height: UIConstants.frameBorder))
+                                    .padding(.trailing, UIConstants.frameBorder)
+                                    .padding(.leading, UIConstants.frameBorder)
+                                //.clipped()
+                            }
+                            Spacer()
+                                .frame(height: 20.0)
+                            if showDescription {
+                                Text(description)
+                                    .customAttribute(EmphasisAttribute())
+                                    .myFont(style: .regular, size: 16.0)
+                                    .scaledToFit()
+                                    .foregroundColor(.white)
+                                    .transition(TextTransition())
+                                    .padding(.leading, UIConstants.frameBorder)
+                                    .padding(.trailing, UIConstants.frameBorder)
+                                    .frame(height: 30.0)
+                            } else {
+                                Spacer()
+                                    .frame(height: 30)
+                            }
+                            Spacer()
+                                .frame(height: 10.0)
+                        }
+                        .frame(width: UIScreen.main.bounds.width - UIConstants.frameBorder * 2)
+                        .padding(.all, 0.0)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.black) // Background color for the rounded rectangle
+                                .shadow(radius: 10) // Optional: Add a shadow for better visual effect)
                         )
-                        .environmentObject(vmCommunity)
-                        .frame(
-                            width: UIScreen.main.bounds.width,
-                            height: UIScreen.main.bounds.width
-                        )
-                        .clipped()
-                    }
-                    Spacer()
-                        .frame(height: 20.0)
-                    if showDescription {
-                        Text(description)
-                            .customAttribute(EmphasisAttribute())
-                            .myFont(style: .regular, size: 16.0)
-                            .scaledToFit()
-                            .foregroundColor(.white)
-                            .transition(TextTransition())
-                            .padding(.leading, 30.0)
-                            .padding(.trailing, 30.0)
-                    } else {
                         Spacer()
-                            .frame(height: 30)
+                            .frame(height: UIConstants.frameBorder / 2)
                     }
+                    .frame(width: UIScreen.main.bounds.width - UIConstants.frameBorder) // Add padding to the entire ZStack
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.customOrange) // Background color for the rounded rectangle
+                            .shadow(radius: 10) // Optional: Add a shadow for better visual effect
+                            .opacity(0.7)
+                    )
                     Spacer()
                         .frame(height: 20)
                     ItemMenubar()
                         .frame(height: 40.0)
                     Spacer()
                 }
-                .frame(height: pageHeight)
-                CommunityDetailView()
-                    .frame(height: pageHeight)
-                    .scrollTransition { content, phase in
-                        content.opacity(phase.isIdentity ? 1.0 : 0.3 )
-                    }
                 
             }.onReceive(vmCommunity.$currentItemIndex) { newValue in
                 withAnimation {

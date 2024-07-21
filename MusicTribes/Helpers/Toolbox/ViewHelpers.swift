@@ -28,3 +28,16 @@ struct LogoView: View {
         }
     }
 }
+
+
+struct TextAnimated: View {
+    @State private var start = Date.now
+
+    var body: some View {
+        TimelineView(.animation) { tl in
+            let time = start.distance(to: tl.date)
+            Text("logo-small")
+                .colorEffect(ShaderLibrary.glowCustom(.float(time)))
+        }
+    }
+}

@@ -10,6 +10,11 @@ import Combine
 
 enum DataType {
     case mixtape
+    case scenes
+}
+
+struct DataConstants {
+    static let mtApiKey = "0b1b7080-0fe9-4b1e-b2d8-5879c46f9d03"
 }
 
 class DataManager {
@@ -30,8 +35,16 @@ class DataManager {
     }
 }
 
-
-
+func jsonFileForDataType(_ dataType: DataType = .mixtape) {
+    var collectedArtists: [CollectedArtist] = []
+    switch dataType {
+    case .mixtape:
+        collectedArtists = loadJSONFromMixtapeFile(fileName: "danc3-songs") ?? []
+    case .scenes:
+        collectedArtists = loadJSONFromMixtapeFile(fileName: "scenes") ?? []
+    }
+    return collectedArtists
+}
 
 func loadJSONFromMixtapeFile(fileName: String) -> [CollectedArtist]? {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {

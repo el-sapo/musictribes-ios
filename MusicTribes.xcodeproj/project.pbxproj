@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
+		0C19ECB62C4CB5AF0075049A /* scenes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB52C4CB5AF0075049A /* scenes.json */; };
+		0C19ECB72C4CB5AF0075049A /* scenes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB52C4CB5AF0075049A /* scenes.json */; };
 		0C1D41402C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41472C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
@@ -126,6 +128,7 @@
 
 /* Begin PBXFileReference section */
 		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
+		0C19ECB52C4CB5AF0075049A /* scenes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scenes.json; sourceTree = "<group>"; };
 		0C1D413F2C39B2DE004305DD /* danc3-songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "danc3-songs.json"; sourceTree = "<group>"; };
 		0C1D41462C39B49E004305DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 			children = (
 				0C1D413F2C39B2DE004305DD /* danc3-songs.json */,
 				0CFE1CB82C12ACFF00211BBD /* artists.json */,
+				0C19ECB52C4CB5AF0075049A /* scenes.json */,
 			);
 			path = mocks;
 			sourceTree = "<group>";
@@ -604,6 +608,7 @@
 			files = (
 				0CE5796B2BF6F997006F1498 /* Preview Assets.xcassets in Resources */,
 				0C960DF12C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */,
+				0C19ECB72C4CB5AF0075049A /* scenes.json in Resources */,
 				0CFE1CB92C12ACFF00211BBD /* artists.json in Resources */,
 				0CC33A5C2C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
 				0CC33A5D2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,
@@ -629,6 +634,7 @@
 			files = (
 				0CFE39112C1FC30D002A0BD5 /* Preview Assets.xcassets in Resources */,
 				0C960DF02C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */,
+				0C19ECB62C4CB5AF0075049A /* scenes.json in Resources */,
 				0CFE39322C1FDA60002A0BD5 /* artists.json in Resources */,
 				0CC33A692C24607B00AA5D59 /* Gotham-Light.otf in Resources */,
 				0CC33A6A2C24607B00AA5D59 /* Gotham-UltraItalic.otf in Resources */,

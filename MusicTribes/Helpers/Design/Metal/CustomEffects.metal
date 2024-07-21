@@ -28,6 +28,38 @@ half4 glowGradient(
 }
 
 [[ stitchable ]]
+//half4 glowCustom(float2 position, half4 color, float t, half4 colorGlow) {
+half4 glowCustom(float2 position, half4 color, float t) {
+    if (color.a < 0.01) {
+        // Return the original color for transparent pixels
+        return color;
+    }
+    // Define the custom colors
+    constexpr half4 customOrange = half4(0.96, 0.38, 0.2, 1.0);
+    constexpr half4 customGreen = half4(0.588, 0.58, 0.333, 1.0);
+    constexpr half4 customCream = half4(0.96, 0.88, 0.81, 0.7);
+    constexpr half4 white = half4(1.0, 1.0, 1.0, 1.0); // White
+    constexpr half4 grey = half4(0.0, 0.0, 0.0, 0.5); // grey
+
+    // Define custom colors
+    half4 color1 = color; // White
+    half4 color2 = grey; // Red
+
+    float angle = atan2(position.y, position.x) + t;
+    float factor = (sin(angle) + 1.0) / 2.0; // Normalize sin(angle) to range [0, 1]
+
+    // Adjust the factor to make color1 more predominant
+    factor = pow(factor, 20); // Adjust this exponent to control predominance
+
+    // Interpolate between color1 and color2
+    half4 gradientColor = mix(color1, color2, factor);
+
+    return half4(gradientColor.rgb, gradientColor.a); // Keep the original alpha
+}
+
+
+
+[[ stitchable ]]
 half4 glowFire(float2 position, half4 color, float t) {
     if (color.a < 0.01) {
         // Return the original color for transparent pixels
