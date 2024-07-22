@@ -16,6 +16,13 @@ extension Color {
     static let water = Color(hex: "#206a82")
     static let clearWater = Color(hex: "#91eff6")
     static let sunset = Color(hex: "#ff9c3e")
+
+    static let scene1 = Color(hex: "#0f91b3")
+    static let scene2 = Color(hex: "#6cc8b3")
+    static let scene3 = Color(hex: "#944cb0")
+    static let scene4 = Color(hex: "#b6a44e")
+    static let scene5 = Color(hex: "#dc650f")
+    static let scene6 = Color(hex: "#dc949f")
 }
 
 struct ColorScheme {

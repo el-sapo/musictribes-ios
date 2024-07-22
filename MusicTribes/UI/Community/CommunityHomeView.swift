@@ -14,7 +14,7 @@ private struct UIConstants {
 
 struct CommunityHomeView: View {
     @EnvironmentObject private var vmHome: HomeViewModel
-    @StateObject private var vmCommunity: CommunityViewModel = CommunityViewModel()
+    @StateObject private var vmCommunity: CommunityViewModel = CommunityViewModel(.mixtape)
     
     @State var description = ""
     @State private var showDescription: Bool = true
@@ -103,7 +103,7 @@ struct CommunityHomeView: View {
                     .frame(width: UIScreen.main.bounds.width - UIConstants.frameBorder) // Add padding to the entire ZStack
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.customOrange) // Background color for the rounded rectangle
+                            .fill(vmCommunity.itemColor) // Background color for the rounded rectangle
                             .shadow(radius: 10) // Optional: Add a shadow for better visual effect
                             .opacity(0.7)
                     )
@@ -146,14 +146,30 @@ struct CommunityHomeView: View {
 
 
 class CommunityViewModel: ObservableObject {
-    @Published var title: String = "DANC3 Mixtape I"
+    @Published var title: String = "SCENES"
     @Published var currentItemIndex: Int = 0
     @Published var data: [CollectedArtist] = []
-    
+    @Published var colorCommunityHome: Color = .customOrange
+    var communityType: DataType = .mixtape
+
     init() {
         loadDataforType()
     }
-    
+
+    init(_ dataType: DataType = .mixtape) {
+        communityType = dataType
+        switch dataType {
+        case .mixtape:
+            title = "DANC3 Mixtape I"
+            colorCommunityHome = .customOrange
+        case .scenes:
+            title = "SCENES"
+            colorCommunityHome = .scene1
+        }
+        loadDataforType(dataType)
+    }
+
+
     var cancellable: AnyCancellable?
     //MockData.loadFromFile().first(where: { artist in
     //    return artist.name == "Sound of Fractures"
@@ -181,7 +197,31 @@ class CommunityViewModel: ObservableObject {
             return ""
         }
     }
-    
+
+    var itemColor: Color {
+        var color: Color = .customOrange
+        guard communityType == .scenes else {
+            return color
+        }
+        switch currentItemIndex {
+        case 0:
+            color = .scene1
+        case 1:
+            color = .scene2
+        case 2:
+            color = .scene3
+        case 3:
+            color = .scene4
+        case 4:
+            color = .scene5
+        case 5:
+            color = .scene6
+        default:
+            color = .customCream
+        }
+        return color
+    }
+
     func extractCollectedItems() -> [CollectedItem] {
         return data.flatMap { $0.collectedItems }
     }

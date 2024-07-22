@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemMenubar: View {
+    @State var baseColor: Color = .customOrange
     var body: some View {
         HStack {
             Spacer()
@@ -16,7 +17,7 @@ struct ItemMenubar: View {
             }) {
                 Image(systemName: "play")
                     .imageScale(.large)
-                    .foregroundStyle(.tint)
+                    .foregroundStyle(baseColor)
                     .symbolEffect(.breathe.plain.byLayer)
             }
             Spacer()

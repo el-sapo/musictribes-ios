@@ -21,21 +21,14 @@ class DataManager {
     static func dataForType(_ dataType: DataType = .mixtape) -> Future<[CollectedArtist], Error> {
         return Future { promise in
             DispatchQueue.global().async {
-                guard let collectedArtists = loadJSONFromMixtapeFile(fileName: "danc3-songs") else {
-                    promise(.failure(
-                        NSError(domain: "",
-                                code: -1,
-                                userInfo: [NSLocalizedDescriptionKey: "Failed to locate file in bundle."]
-                               )))
-                    return
-                }
+                let collectedArtists = jsonFileForDataType(dataType)
                 promise(.success(collectedArtists))
             }
         }
     }
 }
 
-func jsonFileForDataType(_ dataType: DataType = .mixtape) {
+func jsonFileForDataType(_ dataType: DataType = .mixtape) -> [CollectedArtist] {
     var collectedArtists: [CollectedArtist] = []
     switch dataType {
     case .mixtape:
@@ -54,6 +47,14 @@ func loadJSONFromMixtapeFile(fileName: String) -> [CollectedArtist]? {
     
     guard let data = try? Data(contentsOf: url) else {
         print("Failed to load data from file.")
+        return nil
+    }
+
+    // Convert data to string to print it
+    if let jsonString = String(data: data, encoding: .utf8) {
+        print("Loaded JSON data:\n\(jsonString)")
+    } else {
+        print("Failed to convert data to string.")
         return nil
     }
     

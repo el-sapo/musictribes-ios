@@ -10,6 +10,8 @@
 		0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
 		0C19ECB62C4CB5AF0075049A /* scenes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB52C4CB5AF0075049A /* scenes.json */; };
 		0C19ECB72C4CB5AF0075049A /* scenes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB52C4CB5AF0075049A /* scenes.json */; };
+		0C19ECB92C4CC3B10075049A /* scenes-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB82C4CC3A50075049A /* scenes-2.json */; };
+		0C19ECBA2C4CC3B10075049A /* scenes-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB82C4CC3A50075049A /* scenes-2.json */; };
 		0C1D41402C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41472C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
@@ -129,6 +131,7 @@
 /* Begin PBXFileReference section */
 		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
 		0C19ECB52C4CB5AF0075049A /* scenes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scenes.json; sourceTree = "<group>"; };
+		0C19ECB82C4CC3A50075049A /* scenes-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scenes-2.json"; sourceTree = "<group>"; };
 		0C1D413F2C39B2DE004305DD /* danc3-songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "danc3-songs.json"; sourceTree = "<group>"; };
 		0C1D41462C39B49E004305DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 		0C1D41422C39B2EA004305DD /* mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0C19ECB82C4CC3A50075049A /* scenes-2.json */,
 				0C1D413F2C39B2DE004305DD /* danc3-songs.json */,
 				0CFE1CB82C12ACFF00211BBD /* artists.json */,
 				0C19ECB52C4CB5AF0075049A /* scenes.json */,
@@ -619,6 +623,7 @@
 				0CC33A612C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
 				0CC33A622C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */,
 				0CC33A632C24607B00AA5D59 /* Gotham-Black.otf in Resources */,
+				0C19ECBA2C4CC3B10075049A /* scenes-2.json in Resources */,
 				0CC33A642C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */,
 				0CC33A652C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */,
 				0CC33A662C24607B00AA5D59 /* GothamBold.ttf in Resources */,
@@ -645,6 +650,7 @@
 				0CC33A6E2C24607B00AA5D59 /* Gotham-Medium.otf in Resources */,
 				0CC33A6F2C24607B00AA5D59 /* Gotham BoldItalic.otf in Resources */,
 				0CC33A702C24607B00AA5D59 /* Gotham-Black.otf in Resources */,
+				0C19ECB92C4CC3B10075049A /* scenes-2.json in Resources */,
 				0CC33A712C24607B00AA5D59 /* Gotham-ThinItalic.otf in Resources */,
 				0CC33A722C24607B00AA5D59 /* Gotham-XLightItalic.otf in Resources */,
 				0CC33A732C24607B00AA5D59 /* GothamBold.ttf in Resources */,
