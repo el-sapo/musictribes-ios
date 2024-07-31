@@ -22,8 +22,11 @@ struct CollectorGridView: View {
                     ScrollingBackground()
                     LazyVGrid(columns: columns, spacing: 20, pinnedViews: .sectionHeaders ,content: {
                         Section {
-                            ForEach(Array(gridData.enumerated()), id: \.offset) { index, crate in                            CollectorItemCrateView(
-                                vmCrate: CrateViewModel(crateItems: crate.crateItemsFromArtist())
+                            ForEach(Array(gridData.enumerated()), id: \.offset) { index, crate in
+                                CrateView(
+                                    vmCrate: CrateViewModel(
+                                        crateItems: crate.crateItemsFromArtist()
+                                    )
                             )
                             .frame(
                                 width: ((geometry.size.width / 2) - gridSeparation),

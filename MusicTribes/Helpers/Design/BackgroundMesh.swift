@@ -9,13 +9,19 @@ import SwiftUI
 
 
 struct BackgroundGradient: View {
+    let colorScheme: ColorScheme
+
+    init(colorScheme: ColorScheme = BackgroundColorsStyle.dark.colorScheme()) {
+        self.colorScheme = colorScheme
+    }
+
     var body: some View {
         Group {
             if #available(iOS 18.0, *) {
-                BackgroundMesh()
+                BackgroundMesh(colorScheme: colorScheme)
             } else {
                 // Provide a fallback view for iOS versions earlier than 17
-                Color.blue // Example fallback view
+                Color.black // Example fallback view
             }
         }
     }
@@ -26,11 +32,15 @@ struct BackgroundMesh: View {
     @State var t: Float = 0.0
     @State var timer: Timer?
     
-    let colorScheme: ColorScheme = BackgroundColorsStyle.dark.colorScheme()
-    
+    let colorScheme: ColorScheme
+
     var cColor: Color { return colorScheme.alternative }
     var aColor: Color { return colorScheme.primary }
     var bColor: Color { return colorScheme.secondary }
+
+    init(colorScheme: ColorScheme = BackgroundColorsStyle.dark.colorScheme()) {
+        self.colorScheme = colorScheme
+    }
 
     var body: some View {
         MeshGradient(width: 3, height: 3, points: [

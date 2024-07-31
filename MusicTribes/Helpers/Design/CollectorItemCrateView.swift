@@ -29,11 +29,63 @@ struct CrateViewConfig {
         }
 }
 
+private struct UIConstants {
+    static let frameBorder = 5.0
+}
+
 struct CrateView: View {
     @ObservedObject var vmCrate: CrateViewModel
     var body: some View {
         VStack {
-            CollectorItemCrateView(vmCrate: vmCrate)
+            Text(vmCrate.title)
+                .customAttribute(EmphasisAttribute())
+                .myFont(style: .big, size: 16.0)
+                .scaledToFit()
+                .foregroundColor(.customCream)
+                .transition(TextTransition())
+                .myAnimatedGlow(color: .white)
+                .frame(maxWidth: .infinity)
+                .padding(.all, 3.0)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.customGreen) // Background color for the rounded rectangle
+                        .shadow(radius: 10) // Optional: Add a shadow for better visual effect
+                )
+            VStack {
+                CollectorItemCrateView(vmCrate: vmCrate)
+                    .offset(CGSize(width: UIConstants.frameBorder, height: UIConstants.frameBorder))
+                    .padding(.trailing, UIConstants.frameBorder)
+                    .padding(.leading, UIConstants.frameBorder)
+
+                if !vmCrate.subtitle.isEmpty {
+                    Text(vmCrate.subtitle)
+                        .customAttribute(EmphasisAttribute())
+                        .myFont(style: .regular, size: 14.0)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .scaledToFit()
+                        .foregroundColor(.customCream)
+                        .transition(TextTransition())
+                        .padding(.all, 3.0)
+                } else {
+                    Spacer()
+                        .frame(height: 20)
+                }
+            }
+            .padding(.all, 0.0)
+            .cornerRadius(10.0)
+            .background(
+                BackgroundMesh(colorScheme: BackgroundColorsStyle.beach.colorScheme())
+//                RoundedRectangle(cornerRadius: 10)
+//                    .fill(Color.customCream) // Background color for the rounded rectangle
+  //                  .shadow(radius: 10)
+                    .cornerRadius(10.0)
+                    .opacity(0.5)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.customGreen, lineWidth: 3)
+            )
         }
     }
 }
@@ -298,6 +350,16 @@ class CrateViewModel: ObservableObject {
     @Published var currentItemIndex: Int = 0
     let crateItems: [CrateItem]
     let crateConfig: CrateViewConfig
+    @Published var currentTitle: String = "TITLE"
+    @Published var currentSubTitle: String = "description"
+
+    var title: String {
+        return crateItems.first?.artist.name ?? ""
+    }
+
+    var subtitle: String {
+        return crateItems[currentItemIndex].song.title ?? ""
+    }
 
     init(currentItemIndex: Int = 0,
          crateItems: [CrateItem],

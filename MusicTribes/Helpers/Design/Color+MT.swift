@@ -46,7 +46,7 @@ enum BackgroundColorsStyle {
             case .beach:
                 return ColorScheme(
                     primary: .sand,
-                    secondary: .water,
+                    secondary: .customGreen,
                     alternative: .sunset
                 )
             }
