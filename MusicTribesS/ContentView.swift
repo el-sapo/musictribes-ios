@@ -13,7 +13,8 @@ struct ContentView: View {
     // add view model to handle hiding the loader
     var body: some View {
         ZStack {
-            CommunityHomeView()
+//            CommunityHomeView()
+            CollectorMainView()
                 .environmentObject(vm)
             if vm.loading {
                 LoaderView()

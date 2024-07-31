@@ -18,23 +18,23 @@ struct CollectorGridView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 20, pinnedViews: .sectionHeaders ,content: {
-                    Section {
-                        ForEach(gridData) { crate in
-                            CollectorItemCrateView(
-                                collectorCrate: crate,
-                                collectionCrateItems: crate.collectedItems,
-                                crateConfig: CrateViewConfig()
+                ZStack(alignment: .top) {
+                    ScrollingBackground()
+                    LazyVGrid(columns: columns, spacing: 20, pinnedViews: .sectionHeaders ,content: {
+                        Section {
+                            ForEach(Array(gridData.enumerated()), id: \.offset) { index, crate in                            CollectorItemCrateView(
+                                vmCrate: CrateViewModel(crateItems: crate.crateItemsFromArtist())
                             )
-                                .frame(
-                                    width: ((geometry.size.width / 2) - gridSeparation),
-                                    height: geometry.size.width / 2 + 40.0
-                                )
+                            .frame(
+                                width: ((geometry.size.width / 2) - gridSeparation),
+                                height: geometry.size.width / 2 + 40.0
+                            )
+                            }
+                        } header: {
+                            Text("")
                         }
-                    } header: {
-                        Text("")
-                    }
-                })
+                    })
+                }
             }
         }
     }
@@ -45,3 +45,12 @@ struct CollectorGridView: View {
         gridData: MockData.collectedArtists
     )
 }
+
+
+class CollectorGridViewModel: ObservableObject {
+
+ //   func collectedCommunityModelForArtist() -> CommunityViewModel {
+ //       return CommunityViewModel(collectedArtist: collectedArtistdata)
+ //   }
+}
+

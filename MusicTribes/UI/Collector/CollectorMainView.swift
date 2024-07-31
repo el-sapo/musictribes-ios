@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct CollectorMainView: View {
+    @StateObject var vm: CollectorMainViewModel = CollectorMainViewModel()
+
     var body: some View {
         VStack {
             CollectorGridView(
-                gridData: MockData.loadFromFile()
+                gridData: vm.collectedArtistdata
                     )
+            Spacer()
             MusicPlayerView()
-        }
+        }.background(
+            Image("back-wood")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        )
         .padding(EdgeInsets(top: 1, leading: 3, bottom: 0, trailing: 3))
     }
 }
@@ -40,3 +47,15 @@ struct CollectorTitleView: View {
     }
 }
 
+
+class CollectorMainViewModel: ObservableObject {
+    @Published var collectedArtistdata: [CollectedArtist] = []
+
+    init() {
+        loadCollectedArtistdata()
+    }
+
+    func loadCollectedArtistdata() {
+        collectedArtistdata = MockData.loadFromFile()
+    }
+}

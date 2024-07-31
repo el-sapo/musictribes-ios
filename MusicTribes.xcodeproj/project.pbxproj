@@ -16,6 +16,12 @@
 		0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41472C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
 		0C1D41482C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
+		0C3F0F082C596863008A86DA /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F0F072C596863008A86DA /* ScrollingBackground.swift */; };
+		0C3F0F092C596863008A86DA /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F0F072C596863008A86DA /* ScrollingBackground.swift */; };
+		0C4459812C574D8300531B89 /* CrateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4459802C574D8300531B89 /* CrateData.swift */; };
+		0C4459822C574D8300531B89 /* CrateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4459802C574D8300531B89 /* CrateData.swift */; };
+		0C4D6D2F2C53DC3700373303 /* CollectorMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579762BF7049C006F1498 /* CollectorMainView.swift */; };
+		0C4D6D302C53DC4100373303 /* CollectorGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */; };
 		0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
 		0C684BA52C12C139000E1BF7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA42C12C139000E1BF7 /* SDWebImage */; };
 		0C684BA72C12C139000E1BF7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0C684BA62C12C139000E1BF7 /* SDWebImageMapKit */; };
@@ -134,6 +140,8 @@
 		0C19ECB82C4CC3A50075049A /* scenes-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scenes-2.json"; sourceTree = "<group>"; };
 		0C1D413F2C39B2DE004305DD /* danc3-songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "danc3-songs.json"; sourceTree = "<group>"; };
 		0C1D41462C39B49E004305DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0C3F0F072C596863008A86DA /* ScrollingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingBackground.swift; sourceTree = "<group>"; };
+		0C4459802C574D8300531B89 /* CrateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateData.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
 		0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -366,6 +374,7 @@
 				0CE579822BF70F70006F1498 /* Collector.swift */,
 				0C5E6EA12C060E3C003C577B /* CollectedItem.swift */,
 				0C1D41462C39B49E004305DD /* DataManager.swift */,
+				0C4459802C574D8300531B89 /* CrateData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -414,6 +423,7 @@
 				0C960DE92C228619006CB1A6 /* CustomButton.swift */,
 				0C960DEC2C228B28006CB1A6 /* ItemMenubar.swift */,
 				0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */,
+				0C3F0F072C596863008A86DA /* ScrollingBackground.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -682,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE579792BF7085E006F1498 /* CollectorItemCrateView.swift in Sources */,
+				0C4459822C574D8300531B89 /* CrateData.swift in Sources */,
 				0CE5797D2BF70F47006F1498 /* MockData.swift in Sources */,
 				0CFE393F2C1FE12E002A0BD5 /* CollectorItemCrateVMProtocol.swift in Sources */,
 				0CE5797B2BF70A75006F1498 /* CollectorGridView.swift in Sources */,
@@ -689,6 +700,7 @@
 				0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */,
 				0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */,
 				0CF9DC5B2C232BED00701E6F /* Utils.swift in Sources */,
+				0C3F0F092C596863008A86DA /* ScrollingBackground.swift in Sources */,
 				0CE579772BF7049C006F1498 /* CollectorMainView.swift in Sources */,
 				0CA60AA02C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,
 				0C6E25AC2C24C33700A7256D /* ViewExtensions.swift in Sources */,
@@ -717,14 +729,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6E25AD2C24C33700A7256D /* ViewExtensions.swift in Sources */,
+				0C4459812C574D8300531B89 /* CrateData.swift in Sources */,
 				0CA60A9D2C21400300FA31F4 /* Color+MT.swift in Sources */,
+				0C4D6D302C53DC4100373303 /* CollectorGridView.swift in Sources */,
 				0CAB8CBE2C2D075F008061C2 /* LoaderView.swift in Sources */,
 				0CFE390C2C1FC30B002A0BD5 /* ContentView.swift in Sources */,
 				0C960DEB2C228619006CB1A6 /* CustomButton.swift in Sources */,
 				0C960DE72C227F74006CB1A6 /* Ripple.metal in Sources */,
 				0CFE390A2C1FC30B002A0BD5 /* MusicTribesSApp.swift in Sources */,
+				0C3F0F082C596863008A86DA /* ScrollingBackground.swift in Sources */,
 				0CFE39332C1FDA60002A0BD5 /* CollectedItem.swift in Sources */,
 				0CB63A362C33B2630086707C /* ViewHelpers.swift in Sources */,
+				0C4D6D2F2C53DC3700373303 /* CollectorMainView.swift in Sources */,
 				0CA60A9B2C2129E300FA31F4 /* CommunityHomeView.swift in Sources */,
 				0C960DED2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
 				0C1D41472C39B49E004305DD /* DataManager.swift in Sources */,

@@ -52,17 +52,18 @@ struct CommunityHomeView: View {
                         VStack {
                             if vmCommunity.data.count > 0 {
                                 CollectorItemCrateView(
-                                    collectorCrate: vmCommunity.data[0],
-                                    collectionCrateItems: vmCommunity.extractCollectedItems(),
-                                    crateConfig: CrateViewConfig(
-                                        showTextTop: false,
-                                        showTextBottom: true,
-                                        showCount: false,
-                                        crateOffset: 20.0,
-                                        maxItems: vmCommunity.data.count
+                                    vmCrate: CrateViewModel(
+                                        crateItems: vmCommunity.crateItems(),
+                                        crateConfig: CrateViewConfig(
+                                            showTextTop: false,
+                                            showTextBottom: true,
+                                            showCount: false,
+                                            crateOffset: 20.0,
+                                            maxItems: vmCommunity.data.count
+                                        )
+
                                     )
                                 )
-                                .environmentObject(vmCommunity)
                                 .frame(
                                     width: UIScreen.main.bounds.width - UIConstants.frameBorder * 4,
                                     height: UIScreen.main.bounds.width - UIConstants.frameBorder * 4
@@ -152,8 +153,30 @@ class CommunityViewModel: ObservableObject {
     @Published var colorCommunityHome: Color = .customOrange
     var communityType: DataType = .mixtape
 
+    var cancellable: AnyCancellable?
+
     init() {
         loadDataforType()
+    }
+
+    init(artist: CollectedArtist) {
+        title = artist.name ?? ""
+        data = artist.collectedItems.map({ collectedItem in
+            CollectedArtist(contract: artist.contract,
+                            name: artist.name,
+                            collectedNumber: artist.collectedNumber,
+                            collectedItems: [collectedItem]
+            )
+        })
+        communityType = .artist
+    }
+
+    init(collectedArtists: [CollectedArtist]) {
+        if collectedArtists.count > 1 {
+            title = collectedArtists.first?.name ?? ""
+        }
+        data = collectedArtists
+        communityType = .artist
     }
 
     init(_ dataType: DataType = .mixtape) {
@@ -165,15 +188,12 @@ class CommunityViewModel: ObservableObject {
         case .scenes:
             title = "SCENES"
             colorCommunityHome = .scene1
+        default:
+            title = ""
+            colorCommunityHome = .customGreen
         }
         loadDataforType(dataType)
     }
-
-
-    var cancellable: AnyCancellable?
-    //MockData.loadFromFile().first(where: { artist in
-    //    return artist.name == "Sound of Fractures"
-    //})!
 
     func loadDataforType(_ dataType: DataType = .mixtape) {
         cancellable = DataManager.dataForType(dataType)
@@ -224,5 +244,13 @@ class CommunityViewModel: ObservableObject {
 
     func extractCollectedItems() -> [CollectedItem] {
         return data.flatMap { $0.collectedItems }
+    }
+
+    func crateItems() -> [CrateItem] {
+        return data.flatMap { artist in
+            artist.collectedItems.map { song in
+                CrateItem(artist: artist, song: song)
+            }
+        }
     }
 }

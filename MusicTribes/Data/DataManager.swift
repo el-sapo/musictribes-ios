@@ -11,6 +11,7 @@ import Combine
 enum DataType {
     case mixtape
     case scenes
+    case artist
 }
 
 struct DataConstants {
@@ -35,6 +36,8 @@ func jsonFileForDataType(_ dataType: DataType = .mixtape) -> [CollectedArtist] {
         collectedArtists = loadJSONFromMixtapeFile(fileName: "danc3-songs") ?? []
     case .scenes:
         collectedArtists = loadJSONFromMixtapeFile(fileName: "scenes") ?? []
+    default:
+        collectedArtists = []
     }
     return collectedArtists
 }

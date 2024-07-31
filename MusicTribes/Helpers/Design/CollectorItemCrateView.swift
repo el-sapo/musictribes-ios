@@ -16,9 +16,9 @@ struct CrateViewConfig {
     let crateOffset: CGFloat
     let maxItems: Int
     
-    init(showTextTop: Bool = true,
-         showTextBottom: Bool = true,
-         showCount: Bool = true,
+    init(showTextTop: Bool = false,
+         showTextBottom: Bool = false,
+         showCount: Bool = false,
          crateOffset: CGFloat = 8.0,
          maxItems: Int = 3) {
             self.showTextTop = showTextTop
@@ -29,35 +29,38 @@ struct CrateViewConfig {
         }
 }
 
-struct CollectorItemCrateView: View {
-    @EnvironmentObject private var vmCommunity: CommunityViewModel
-
-    let collectorCrate: CollectedArtist
-    let collectionCrateItems: [CollectedItem]
-    let crateWidth: CGFloat = 150.0
-    let crateConfig: CrateViewConfig
-    var crateTitle: String {
-        var text = collectorCrate.name
-        if crateConfig.showCount {
-            text = text + " \(collectorCrate.collectedNumber)"
+struct CrateView: View {
+    @ObservedObject var vmCrate: CrateViewModel
+    var body: some View {
+        VStack {
+            CollectorItemCrateView(vmCrate: vmCrate)
         }
-        return text
+    }
+}
+
+struct CollectorItemCrateView: View {
+    @ObservedObject var vmCrate: CrateViewModel
+
+    let crateWidth: CGFloat = 150.0
+    var crateTitle: String {
+        return "title"
+//        var text = vmCrate.crateItems.artist.name
+//        if vmCrate.crateConfig.showCount {
+//            text = text + " \(vmCrate.artist.collectedNumber)"
+//        }
+//        return text
     }
     
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading) {
-                if crateConfig.showTextTop {
-                    Text("\(collectorCrate.name) (\(collectorCrate.collectedNumber))")
-                        .myFont(style: .bold, size: 20.0)
-                        .frame(minHeight: 20.0)
-                }
                 CarouselView(
-                    allImages: .constant(collectionCrateItems.map { $0.image }),
-                    allTitles: .constant(collectionCrateItems.map { $0.title }),
+                    vmCrate: vmCrate,
+                    allImages: .constant(vmCrate.crateItems.map { $0.song.image }),
+                    allTitles: .constant(vmCrate.crateItems.map { $0.song.title }),
                     maxWidth: .constant(geometry.size.width),
-                    offsetBetweenImages: crateConfig.crateOffset,
-                    maxItems: crateConfig.maxItems
+                    offsetBetweenImages: vmCrate.crateConfig.crateOffset,
+                    maxItems: vmCrate.crateConfig.maxItems
                 ).frame(
                     width: geometry.size.width,
                     height: geometry.size.width
@@ -68,15 +71,8 @@ struct CollectorItemCrateView: View {
 }
 
 #Preview {
-    CollectorItemCrateView( 
-        collectorCrate: 
-            CollectedArtist(
-                contract: "",
-                name: "Sound of Fractures",
-                collectedNumber: "104"
-            ), 
-        collectionCrateItems: MockData.collectedItems,
-        crateConfig: CrateViewConfig()
+    CollectorItemCrateView(
+        vmCrate: CrateViewModel(currentItemIndex: 0, crateItems: [])
     )
 }
 
@@ -87,7 +83,7 @@ struct CollectorItemCrateView: View {
 
 
 struct CarouselView: View {
-    @EnvironmentObject private var vmCommunity: CommunityViewModel
+    @ObservedObject var vmCrate: CrateViewModel
 
     @Binding var allImages: [String]
     @Binding var allTitles: [String]
@@ -180,11 +176,11 @@ struct CarouselView: View {
                     isVisible = true
                 }
         }
-        .onReceive(vmCommunity.$currentItemIndex) { newValue in
+        .onReceive(vmCrate.$currentItemIndex) { newValue in
             self.currentIndex = newValue
         }
         .onChange(of: currentIndex) {
-            vmCommunity.currentItemIndex = currentIndex
+            vmCrate.currentItemIndex = currentIndex
         }
     }
     
@@ -267,8 +263,6 @@ struct CarouselScrollView: View {
         .scrollTargetBehavior(.paging)
     }
 }
-private let pageHeight: CGFloat = UIScreen.main.bounds.height
-
 
 #Preview("Position-based Hue & Scale") {
     ScrollView(.vertical) {
@@ -297,5 +291,19 @@ private let pageHeight: CGFloat = UIScreen.main.bounds.height
             }
         }
         .padding()
+    }
+}
+
+class CrateViewModel: ObservableObject {
+    @Published var currentItemIndex: Int = 0
+    let crateItems: [CrateItem]
+    let crateConfig: CrateViewConfig
+
+    init(currentItemIndex: Int = 0,
+         crateItems: [CrateItem],
+         crateConfig: CrateViewConfig = CrateViewConfig()) {
+        self.currentItemIndex = currentItemIndex
+        self.crateItems = crateItems
+        self.crateConfig = crateConfig
     }
 }

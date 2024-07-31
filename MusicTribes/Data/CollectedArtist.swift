@@ -24,4 +24,12 @@ struct CollectedArtist: Hashable, Identifiable {
         hasher.combine(collectedNumber)
         hasher.combine(collectedItems)
     }
+
+    func crateItemsFromArtist() -> [CrateItem] {
+        return self.collectedItems.map { song in
+            CrateItem(artist: self, song: song)
+        }
+    }
 }
+
+
