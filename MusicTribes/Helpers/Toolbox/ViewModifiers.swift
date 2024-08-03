@@ -62,6 +62,24 @@ struct MyAnimatedGlow: ViewModifier {
     }
 }
 
+struct MyTribesGlow: ViewModifier {
+    @State private var start:Date = Date.now
+
+    init(start: Foundation.Date = Date.now) {
+        self.start = start
+    }
+
+    //  where we define how the modifier alters the provided content.
+    func body(content: Content) -> some View {
+        TimelineView(.animation) { tl in
+            let time = start.distance(to: tl.date)
+            content
+                .colorEffect(ShaderLibrary.glowFire(.float(time)))
+            // .layerEffect(ShaderLibrary.emboss(.float(0.3)), maxSampleOffset: .zero)
+        }
+    }
+}
+
 extension View {
     /// Applies the given transform if the given condition evaluates to `true`.
     /// - Parameters:

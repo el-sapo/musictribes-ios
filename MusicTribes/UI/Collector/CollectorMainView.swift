@@ -12,17 +12,12 @@ struct CollectorMainView: View {
 
     var body: some View {
         VStack {
-            CollectorGridView(
-                gridData: vm.collectedArtistdata
-                    )
+            CollectorGridView()
             Spacer()
-            MusicPlayerView()
-        }.background(
-            Image("back-wood")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-        )
-        .padding(EdgeInsets(top: 1, leading: 3, bottom: 0, trailing: 3))
+       //     MusicPlayerView()
+        }
+        .background(Color.customGreen)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

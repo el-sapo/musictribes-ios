@@ -160,7 +160,7 @@ class CommunityViewModel: ObservableObject {
     }
 
     init(artist: CollectedArtist) {
-        title = artist.name ?? ""
+        title = artist.name
         data = artist.collectedItems.map({ collectedItem in
             CollectedArtist(contract: artist.contract,
                             name: artist.name,

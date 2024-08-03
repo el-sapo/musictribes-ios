@@ -19,7 +19,7 @@ struct CrateViewConfig {
     init(showTextTop: Bool = false,
          showTextBottom: Bool = false,
          showCount: Bool = false,
-         crateOffset: CGFloat = 8.0,
+         crateOffset: CGFloat = 5.0,
          maxItems: Int = 3) {
             self.showTextTop = showTextTop
             self.showTextBottom = showTextBottom
@@ -56,7 +56,6 @@ struct CrateView: View {
                     .offset(CGSize(width: UIConstants.frameBorder, height: UIConstants.frameBorder))
                     .padding(.trailing, UIConstants.frameBorder)
                     .padding(.leading, UIConstants.frameBorder)
-
                 if !vmCrate.subtitle.isEmpty {
                     Text(vmCrate.subtitle)
                         .customAttribute(EmphasisAttribute())
@@ -75,12 +74,11 @@ struct CrateView: View {
             .padding(.all, 0.0)
             .cornerRadius(10.0)
             .background(
-                BackgroundMesh(colorScheme: BackgroundColorsStyle.beach.colorScheme())
-//                RoundedRectangle(cornerRadius: 10)
-//                    .fill(Color.customCream) // Background color for the rounded rectangle
-  //                  .shadow(radius: 10)
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.black)
                     .cornerRadius(10.0)
-                    .opacity(0.5)
+                    .opacity(0.4)
+                    .shadow(radius: 10)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -89,6 +87,127 @@ struct CrateView: View {
         }
     }
 }
+
+struct CommunityCrateView: View {
+    @ObservedObject var vmCrate: CrateViewModel
+    var body: some View {
+        VStack {
+            Text(vmCrate.title)
+                .customAttribute(EmphasisAttribute())
+                .myFont(style: .big, size: 16.0)
+                .scaledToFit()
+                .foregroundColor(.customCream)
+                .transition(TextTransition())
+                .myAnimatedGlow(color: .white)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 5.0)
+            VStack {
+                if vmCrate.crateItems.count > 0 {
+                    CollectorItemCrateView(
+                        vmCrate: CrateViewModel(
+                            crateItems: vmCrate.crateItems,
+                            crateConfig: CrateViewConfig(
+                                showTextTop: false,
+                                showTextBottom: true,
+                                showCount: false,
+                                crateOffset: 20.0,
+                                maxItems: min(vmCrate.crateItems.count, 5)
+                            )
+
+                        )
+                    )
+                    .offset(CGSize(width: UIConstants.frameBorder / 2, height: UIConstants.frameBorder / 2))
+                    .padding(.trailing, UIConstants.frameBorder / 2)
+                    .padding(.leading, UIConstants.frameBorder / 2)
+                    //.clipped()
+                }
+                Text(vmCrate.subtitle)
+                        .customAttribute(EmphasisAttribute())
+                        .myFont(style: .regular, size: 14.0)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .scaledToFit()
+                        .foregroundColor(.customCream)
+                        .transition(TextTransition())
+                        .padding(.all, 3.0)
+
+            }
+     //       .frame(width: UIScreen.main.bounds.width - UIConstants.frameBorder * 2)
+            .padding(.all, 3.0)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.black) // Background color for the rounded rectangle
+                    .opacity(0.8)
+                    .shadow(radius: 10)
+            )
+            Spacer()
+                .frame(height: UIConstants.frameBorder / 2)
+        }
+//        .frame(width: UIScreen.main.bounds.width - UIConstants.frameBorder) // Add padding to the entire ZStack
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.customOrange) // Background color for the rounded rectangle
+                .shadow(radius: 10) // Optional: Add a shadow for better visual effect
+                .opacity(0.7)
+        ).overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.customOrange, lineWidth: 3)
+        )
+    }
+}
+
+
+#Preview {
+    VStack {
+        CommunityCrateView(vmCrate:
+            CrateViewModel(
+                crateItems:
+                    [CrateItem(
+                        artist: CollectedArtist(contract: "",
+                                                name: "DANC3",
+                                                collectedNumber: "1",
+                                                collectedItems: []),
+                        song: CollectedItem(image: "",
+                                            title: "mixtape",
+                                            description: "description", sourceUrl: "")),
+                     CrateItem(
+                        artist: CollectedArtist(contract: "",
+                                                name: "Scenes",
+                                                collectedNumber: "3",
+                                                collectedItems: []),
+                        song: CollectedItem(image: "",
+                                            title: "Willow",
+                                            description: "description",
+                                            sourceUrl: "")
+                        )]
+            )
+        )
+        CrateView(vmCrate:
+                    CrateViewModel(
+                        crateItems:
+                            [CrateItem(
+                                artist: CollectedArtist(contract: "",
+                                                        name: "DANC3",
+                                                        collectedNumber: "1",
+                                                        collectedItems: []),
+                                song: CollectedItem(image: "album-1",
+                                                    title: "mixtape",
+                                                    description: "description", sourceUrl: "")),
+                             CrateItem(
+                                artist: CollectedArtist(contract: "",
+                                                        name: "Scenes",
+                                                        collectedNumber: "3",
+                                                        collectedItems: []),
+                                song: CollectedItem(image: "album-1",
+                                                    title: "Willow",
+                                                    description: "description",
+                                                    sourceUrl: "")
+                             )]
+                    )
+        )
+    }
+}
+
 
 struct CollectorItemCrateView: View {
     @ObservedObject var vmCrate: CrateViewModel
@@ -122,11 +241,11 @@ struct CollectorItemCrateView: View {
     }
 }
 
-#Preview {
-    CollectorItemCrateView(
-        vmCrate: CrateViewModel(currentItemIndex: 0, crateItems: [])
-    )
-}
+//#Preview {
+//    CollectorItemCrateView(
+//        vmCrate: CrateViewModel(currentItemIndex: 0, crateItems: [])
+//    )
+//}
 
 /**
  Ideas:
@@ -316,6 +435,7 @@ struct CarouselScrollView: View {
     }
 }
 
+/*
 #Preview("Position-based Hue & Scale") {
     ScrollView(.vertical) {
         VStack {
@@ -344,7 +464,7 @@ struct CarouselScrollView: View {
         }
         .padding()
     }
-}
+}*/
 
 class CrateViewModel: ObservableObject {
     @Published var currentItemIndex: Int = 0

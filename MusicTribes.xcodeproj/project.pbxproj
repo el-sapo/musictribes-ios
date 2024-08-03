@@ -115,6 +115,10 @@
 		0CFE393B2C1FDB92002A0BD5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFE393A2C1FDB92002A0BD5 /* SDWebImage */; };
 		0CFE393D2C1FDB92002A0BD5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFE393C2C1FDB92002A0BD5 /* SDWebImageSwiftUI */; };
 		0CFE393F2C1FE12E002A0BD5 /* CollectorItemCrateVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */; };
+		0CFF49FA2C5C9180001D9539 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49F92C5C9179001D9539 /* Community.swift */; };
+		0CFF49FB2C5C9180001D9539 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49F92C5C9179001D9539 /* Community.swift */; };
+		0CFF49FD2C5CEF81001D9539 /* CommunityCrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */; };
+		0CFF49FE2C5CEF81001D9539 /* CommunityCrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +202,8 @@
 		0CFE39242C1FC30F002A0BD5 /* MusicTribesSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesSUITests.swift; sourceTree = "<group>"; };
 		0CFE39262C1FC30F002A0BD5 /* MusicTribesSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorItemCrateVMProtocol.swift; sourceTree = "<group>"; };
+		0CFF49F92C5C9179001D9539 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCrateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +373,7 @@
 		0CE579722BF6FA44006F1498 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0CFF49F92C5C9179001D9539 /* Community.swift */,
 				0C1D41422C39B2EA004305DD /* mocks */,
 				0CE5797C2BF70F47006F1498 /* MockData.swift */,
 				0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */,
@@ -419,6 +426,7 @@
 				0C960DE02C226161006CB1A6 /* CustomAnimations.swift */,
 				0CF84EFF2C11778A00453EAF /* Color+MT.swift */,
 				0CE579782BF7085E006F1498 /* CollectorItemCrateView.swift */,
+				0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */,
 				0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */,
 				0C960DE92C228619006CB1A6 /* CustomButton.swift */,
 				0C960DEC2C228B28006CB1A6 /* ItemMenubar.swift */,
@@ -693,6 +701,7 @@
 			files = (
 				0CE579792BF7085E006F1498 /* CollectorItemCrateView.swift in Sources */,
 				0C4459822C574D8300531B89 /* CrateData.swift in Sources */,
+				0CFF49FE2C5CEF81001D9539 /* CommunityCrateView.swift in Sources */,
 				0CE5797D2BF70F47006F1498 /* MockData.swift in Sources */,
 				0CFE393F2C1FE12E002A0BD5 /* CollectorItemCrateVMProtocol.swift in Sources */,
 				0CE5797B2BF70A75006F1498 /* CollectorGridView.swift in Sources */,
@@ -712,6 +721,7 @@
 				0C960DE22C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
 				0C1D41482C39B49E004305DD /* DataManager.swift in Sources */,
 				0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */,
+				0CFF49FA2C5C9180001D9539 /* Community.swift in Sources */,
 				0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
 				0C960DE82C227F74006CB1A6 /* Ripple.metal in Sources */,
@@ -730,6 +740,7 @@
 			files = (
 				0C6E25AD2C24C33700A7256D /* ViewExtensions.swift in Sources */,
 				0C4459812C574D8300531B89 /* CrateData.swift in Sources */,
+				0CFF49FD2C5CEF81001D9539 /* CommunityCrateView.swift in Sources */,
 				0CA60A9D2C21400300FA31F4 /* Color+MT.swift in Sources */,
 				0C4D6D302C53DC4100373303 /* CollectorGridView.swift in Sources */,
 				0CAB8CBE2C2D075F008061C2 /* LoaderView.swift in Sources */,
@@ -749,6 +760,7 @@
 				0CA60AA12C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,
 				0CFE39352C1FDA60002A0BD5 /* Artist.swift in Sources */,
 				0CA60A9E2C21400D00FA31F4 /* CollectorItemCrateVMProtocol.swift in Sources */,
+				0CFF49FB2C5C9180001D9539 /* Community.swift in Sources */,
 				0CFE39362C1FDA60002A0BD5 /* Collector.swift in Sources */,
 				0CFE39372C1FDA60002A0BD5 /* CollectedArtist.swift in Sources */,
 				0C6E25A92C24C2F100A7256D /* ViewModifiers.swift in Sources */,

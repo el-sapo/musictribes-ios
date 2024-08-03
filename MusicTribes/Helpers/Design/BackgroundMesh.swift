@@ -21,7 +21,7 @@ struct BackgroundGradient: View {
                 BackgroundMesh(colorScheme: colorScheme)
             } else {
                 // Provide a fallback view for iOS versions earlier than 17
-                Color.black // Example fallback view
+                colorScheme.primary
             }
         }
     }
@@ -56,7 +56,7 @@ struct BackgroundMesh: View {
                 aColor, aColor, aColor,
                 bColor, aColor, cColor
                ])
-               .background(.black)
+//               .background(.black)
                .onAppear {
                    timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { _ in
                        t += 0.06

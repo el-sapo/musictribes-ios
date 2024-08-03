@@ -10,12 +10,14 @@ import SwiftUI
 
 extension Color {
     static let customOrange = Color(red: 0.96, green: 0.38, blue: 0.2) // #F46133
-    static let customGreen = Color(red: 0.588, green: 0.58, blue: 0.333)
-    static let customCream = Color(red: 0.96, green: 0.88, blue: 0.81)
+    static let customGreen = Color(red: 0.588, green: 0.58, blue: 0.333) // #969455
+    static let customCream = Color(red: 0.96, green: 0.88, blue: 0.81) // #F5E0CF
     static let sand = Color(hex: "#ffeac2")
     static let water = Color(hex: "#206a82")
     static let clearWater = Color(hex: "#91eff6")
     static let sunset = Color(hex: "#ff9c3e")
+    static let customClear = Color(red: 0.96, green: 0.88, blue: 0.81, opacity: 0.1) // #F5E0CF
+
 
     static let scene1 = Color(hex: "#0f91b3")
     static let scene2 = Color(hex: "#6cc8b3")
@@ -34,7 +36,8 @@ struct ColorScheme {
 enum BackgroundColorsStyle {
     case dark
     case beach
-    
+    case crate
+
     func colorScheme() -> ColorScheme {
             switch self {
             case .dark:
@@ -48,6 +51,12 @@ enum BackgroundColorsStyle {
                     primary: .sand,
                     secondary: .customGreen,
                     alternative: .sunset
+                )
+            case .crate:
+                return ColorScheme(
+                    primary: .clear,
+                    secondary: .customCream,
+                    alternative: .customCream
                 )
             }
         }

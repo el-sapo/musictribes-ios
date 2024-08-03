@@ -18,4 +18,9 @@ extension View {
     public func myAnimatedGlow(color: Color) -> some View {
         modifier(MyAnimatedGlow())
     }
+
+    public func myTribesGlow(color: Color) -> some View {
+        modifier(MyTribesGlow())
+    }
+
 }

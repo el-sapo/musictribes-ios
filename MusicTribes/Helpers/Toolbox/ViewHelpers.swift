@@ -10,6 +10,11 @@ import SwiftUI
 struct LogoView: View {
     @State private var start = Date.now
     let animateLogo: Bool = true
+    let addEmboss: Bool
+
+    init(emboss: Bool = true) {
+        self.addEmboss = emboss
+    }
 
     var body: some View {
         TimelineView(.animation) { tl in
@@ -23,6 +28,9 @@ struct LogoView: View {
                 .if(animateLogo) { view in
                     view
                         .colorEffect(ShaderLibrary.glowFire(.float(time)))
+                }
+                .if(addEmboss) { view in
+                    view
                         .layerEffect(ShaderLibrary.emboss(.float(0.3)), maxSampleOffset: .zero)
                 }
         }
