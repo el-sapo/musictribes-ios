@@ -15,8 +15,10 @@ struct CollectorGridView: View {
     let communityColumns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 300))]
     let screenSize = UIScreen.main.bounds
 
-//    let gridData: [CollectedArtist]
     let gridSeparation = 20.0
+
+    // animation:
+    @State private var rotationAngle: Double = 0.0
 
     var body: some View {
         GeometryReader { geometry in
@@ -25,7 +27,7 @@ struct CollectorGridView: View {
                 ScrollView {
                     ZStack(alignment: .top) {
                         ScrollingBackground()
-                            .opacity(0.5)
+                            .opacity(0.3)
                         Color.black
                             .opacity(0.4)
                         VStack {
@@ -47,8 +49,8 @@ struct CollectorGridView: View {
                                         RoundedRectangle(cornerSize: CGSizeZero)
                                             .stroke(Color.customOrange, lineWidth: 1)
                                     )
-                                    .rotationEffect(.degrees(20.0))
-                                    .animation(.default, value: 20.0)
+                                    .rotationEffect(.degrees(20.0 + rotationAngle))
+                                    .animation(.snappy, value: 20.0 + rotationAngle)
                                     .padding(.all, 3.0)
                                     .shadow(radius: 5.0, x: 3.0, y: 3.0)
                                 Image("pfp-frog")
@@ -59,8 +61,8 @@ struct CollectorGridView: View {
                                         RoundedRectangle(cornerSize: CGSizeZero)
                                             .stroke(Color.customOrange, lineWidth: 1)
                                     )
-                                    .rotationEffect(.degrees(-20.0))
-                                    .animation(.default, value: 20.0)
+                                    .rotationEffect(.degrees(-5 + rotationAngle))
+                                    .animation(.snappy, value: -5 + rotationAngle)
                                     .padding(.all, 3.0)
                                     .shadow(radius: 5.0, x: 3.0, y: 3.0)
                                 Image("pfp-raver-realm")
@@ -72,8 +74,8 @@ struct CollectorGridView: View {
                                         RoundedRectangle(cornerSize: CGSizeZero)
                                             .stroke(Color.customOrange, lineWidth: 1)
                                     )
-                                    .rotationEffect(.degrees(20.0))
-                                    .animation(.default, value: 20.0)
+                                    .rotationEffect(.degrees(-rotationAngle))
+                                    .animation(.snappy, value: -rotationAngle)
                                     .padding(.all, 3.0)
                                     .shadow(radius: 5.0, x: 3.0, y: 3.0)
                                 Spacer()
@@ -87,10 +89,6 @@ struct CollectorGridView: View {
                                 .frame(height: 50.0)
                             Spacer()
                                 .frame(height: 20.0)
-                            // PFPs
-                            HStack {
-
-                            }
                             // COMMUNITIES
                             LazyVGrid(columns: columns, spacing: 20, pinnedViews: .sectionHeaders ,content: {
                                 Section {
@@ -106,11 +104,12 @@ struct CollectorGridView: View {
                                         )
                                     }
                                 } header: {
-                                    Text("Tribes")
-                                        .myFont(style: .light, size: 30.0)
+                                    Image("logo-tribes")
+                                        .resizable()
+                                        .aspectRatio(contentMode: ContentMode.fit)
                                         .foregroundColor(.customCream)
-                                        .padding(.all, 0.0)
-                                        .shadow(radius: 10.0, x: 10.0, y: 10.0)
+                                        .frame(height: 35.0)
+                                        .opacity(0.8)
                                 }
                             })
                             // COLLECTION
@@ -128,17 +127,34 @@ struct CollectorGridView: View {
                                         )
                                     }
                                 } header: {
-                                    Text("My Collection")
-                                        .myFont(style: .light, size: 30.0)
-                                        .foregroundColor(.customCream)
-                                        .padding(.all, 0.0)
-                                        .shadow(radius: 20.0)
+                                    HStack(alignment: .top) {
+                                        Spacer()
+                                        Text("music")
+                                            .myFont(style: .light, size: 25.0)
+                                            .foregroundColor(.customCream)
+                                            .padding(.all, 0.0)
+                                            .shadow(radius: 10.0, x: 10.0, y: 10.0)
+                                        Image("logo-pfp")
+                                            .resizable()
+                                            .aspectRatio(contentMode: ContentMode.fit)
+                                            .foregroundColor(.customCream)
+                                            .padding(.all, 0.0)
+                                            .frame(height: 35.0)
+                                            .opacity(0.8)
+                                            .shadow(color: .black, radius: 10.0, x: 10.0, y: 10.0)
+                                        Spacer()
+                                    }.padding(.top, 20)
                                 }
                             })
                         }
                     }
                 }
                 .padding(.all, 0.0)
+            }
+        }
+        .onAppear {
+            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { _ in
+                rotationAngle = rotationAngle >= 0 ? -10.0 : 10.0
             }
         }
     }

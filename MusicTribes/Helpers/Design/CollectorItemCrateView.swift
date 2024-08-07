@@ -15,17 +15,20 @@ struct CrateViewConfig {
     let showCount: Bool
     let crateOffset: CGFloat
     let maxItems: Int
-    
+    let color: Color
+
     init(showTextTop: Bool = false,
          showTextBottom: Bool = false,
          showCount: Bool = false,
          crateOffset: CGFloat = 5.0,
-         maxItems: Int = 3) {
+         maxItems: Int = 3,
+         color: Color = .customGreen) {
             self.showTextTop = showTextTop
             self.showTextBottom = showTextBottom
             self.showCount = showCount
             self.crateOffset = crateOffset
             self.maxItems = maxItems
+            self.color = color
         }
 }
 
@@ -38,12 +41,12 @@ struct CrateView: View {
     var body: some View {
         VStack {
             Text(vmCrate.title)
-                .customAttribute(EmphasisAttribute())
+             //   .customAttribute(EmphasisAttribute())
                 .myFont(style: .big, size: 16.0)
                 .scaledToFit()
                 .foregroundColor(.customCream)
                 .transition(TextTransition())
-                .myAnimatedGlow(color: .white)
+              //  .myAnimatedGlow(color: .white)
                 .frame(maxWidth: .infinity)
                 .padding(.all, 3.0)
                 .background(
@@ -111,7 +114,8 @@ struct CommunityCrateView: View {
                                 showTextBottom: true,
                                 showCount: false,
                                 crateOffset: 20.0,
-                                maxItems: min(vmCrate.crateItems.count, 5)
+                                maxItems: min(vmCrate.crateItems.count, 5),
+                                color: .customOrange
                             )
 
                         )
@@ -224,18 +228,45 @@ struct CollectorItemCrateView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                CarouselView(
-                    vmCrate: vmCrate,
-                    allImages: .constant(vmCrate.crateItems.map { $0.song.image }),
-                    allTitles: .constant(vmCrate.crateItems.map { $0.song.title }),
-                    maxWidth: .constant(geometry.size.width),
-                    offsetBetweenImages: vmCrate.crateConfig.crateOffset,
-                    maxItems: vmCrate.crateConfig.maxItems
-                ).frame(
-                    width: geometry.size.width,
-                    height: geometry.size.width
-                )
+            ZStack {
+                VStack(alignment: .leading) {
+                    CarouselView(
+                        vmCrate: vmCrate,
+                        allImages: .constant(vmCrate.crateItems.map { $0.song.image }),
+                        allTitles: .constant(vmCrate.crateItems.map { $0.song.title }),
+                        maxWidth: .constant(geometry.size.width),
+                        offsetBetweenImages: vmCrate.crateConfig.crateOffset,
+                        maxItems: vmCrate.crateConfig.maxItems
+                    ).frame(
+                        width: geometry.size.width,
+                        height: geometry.size.width
+                    )
+                }
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer().frame(width: 5.0)
+                        Button(action: {
+                            print("play!")
+                        }) {
+                            Image(systemName: "play.square.fill")
+                                .imageScale(.large)
+                                .foregroundStyle(vmCrate.crateConfig.color)
+                                .symbolEffect(.breathe.plain.byLayer)
+                                .shadow(color: Color.black, radius: 20.0, x: 15.0, y: 15.0)
+                        }
+                        Spacer().frame(width: 5.0)
+                        Button(action: {
+                            print("add")
+                        }) {
+                            Image(systemName: "plus.square.fill")
+                                .imageScale(.large)
+                                .foregroundStyle(vmCrate.crateConfig.color)
+                                .symbolEffect(.breathe.plain.byLayer)
+                        }
+                        Spacer()
+                    }
+                }.opacity(0.9)
             }
         }
     }
@@ -478,6 +509,9 @@ class CrateViewModel: ObservableObject {
     }
 
     var subtitle: String {
+        if crateItems[currentItemIndex].song.title == "Willow's Heartbeat (Scene 1)" {
+            return "SCENES"
+        }
         return crateItems[currentItemIndex].song.title ?? ""
     }
 

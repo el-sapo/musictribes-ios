@@ -59,9 +59,9 @@ struct CommunityHomeView: View {
                                             showTextBottom: true,
                                             showCount: false,
                                             crateOffset: 20.0,
-                                            maxItems: vmCommunity.data.count
+                                            maxItems: vmCommunity.data.count,
+                                            color: .customOrange
                                         )
-
                                     )
                                 )
                                 .frame(
