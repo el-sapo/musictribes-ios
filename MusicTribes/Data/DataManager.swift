@@ -163,21 +163,6 @@ func loadArtistJSONFromFile(_ dataType: DataType = .mixtape, fileName: String) -
 
         return collectedArtists
     }
-
-    struct Song: Codable, Hashable {
-        let artist: String
-        let artistId: String
-        let coverImage: String
-        let title: String
-        let description: String?
-        let songUrl: String
-        let webappUri: String
-        let artistAvatarUrl: String
-        let twitterHandle: String
-        let instagramHandle: String
-        let spotifyUrl: String
-        let createdAtTime: String
-    }
 }
 
 // Define a structure that mirrors the JSON data

@@ -11,12 +11,13 @@ struct CollectorMainView: View {
     @StateObject var vm: CollectorMainViewModel = CollectorMainViewModel()
 
     var body: some View {
-        VStack {
+        ZStack {
             CollectorGridView()
-            Spacer()
-       //     MusicPlayerView()
+            VStack {
+                Spacer()
+                MusicPlayerView()
+            }
         }
-        .background(Color.customGreen)
         .edgesIgnoringSafeArea(.all)
     }
 }

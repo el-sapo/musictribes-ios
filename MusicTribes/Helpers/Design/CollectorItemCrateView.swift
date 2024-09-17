@@ -247,7 +247,7 @@ struct CollectorItemCrateView: View {
                     HStack {
                         Spacer().frame(width: 5.0)
                         Button(action: {
-                            print("play!")
+                            vmCrate.playCurrentItem()
                         }) {
                             Image(systemName: "play.square.fill")
                                 .imageScale(.large)
@@ -257,7 +257,7 @@ struct CollectorItemCrateView: View {
                         }
                         Spacer().frame(width: 5.0)
                         Button(action: {
-                            print("add")
+                            vmCrate.queueCurrentItem()
                         }) {
                             Image(systemName: "plus.square.fill")
                                 .imageScale(.large)
@@ -521,5 +521,15 @@ class CrateViewModel: ObservableObject {
         self.currentItemIndex = currentItemIndex
         self.crateItems = crateItems
         self.crateConfig = crateConfig
+    }
+
+    func playCurrentItem() {
+        let playSong = crateItems[currentItemIndex].songToPlay()
+        MusicPlayerManager.shared.addToQueue(playSong, play: true)
+    }
+
+    func queueCurrentItem() {
+        let playSong = crateItems[currentItemIndex].songToPlay()
+        MusicPlayerManager.shared.addToQueue(playSong)
     }
 }
