@@ -13,14 +13,15 @@ struct Song: Codable, Hashable {
     let description: String?
     let songUrl: String
     let webappUri: String
-    let artistAvatarUrl: String
-    let twitterHandle: String
-    let instagramHandle: String
-    let spotifyUrl: String
+    let artistAvatarUrl: String?
+    let twitterHandle: String?
+    let instagramHandle: String?
+    let spotifyUrl: String?
     let createdAtTime: String
 }
 
-struct PlaySong {
+struct PlaySong: Identifiable {
+    var id: String { songUrl }
     let artist: String
     let title: String
     let coverImage: String

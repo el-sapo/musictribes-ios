@@ -15,7 +15,7 @@ private struct Constants {
 struct MusicPlayerView: View {
     @State var count: Int = 0
     @StateObject var viewModel = MusicPlayerViewModel()
-
+    @State private var showPlaylist = false
 
     // TODO: just show play button and use gestures!! right, left, up (playing + list)
     // TODO: show animation around play button or equalizers
@@ -23,23 +23,29 @@ struct MusicPlayerView: View {
         HStack {
             VStack {
                 if viewModel.showSongDetails {
-                    Text("\(viewModel.playingTitle) (by \(viewModel.playingArtist))")
-                        .myFont(style: .bold, size: 12.0)
+                    Text("\(viewModel.songTitle) (by \(viewModel.songArtist))")
+                        .myFont(style: .bold, size: 18.0)
                         .scaledToFit()
                         .foregroundColor(.customOrange)
                         .myTribesGlow(color: .white)
                         .frame(height: 20.0)
-                        .padding(.top, 10.0)
+                        .padding(.top, 5.0)
+                }
+                if viewModel.musicPlayer.playbackProgress > 0 {
+                    ProgressView(value: viewModel.musicPlayer.playbackProgress)
+                        .frame(height: 5.0)
                 }
                 HStack {
                     Button(action: { viewModel.musicPlayer.previous() }) {
-                        Image(systemName: "backward.circle")
+                        Image(systemName: "chevron.backward.square.fill")
                             .resizable()
                             .frame(width: Constants.buttonSize, height: Constants.buttonSize)
                             .foregroundColor(Color.customOrange)
-                            .symbolEffect(.breathe.plain.byLayer)
+                            .ifiOS18OrLater { view in
+                                view.symbolEffect(.breathe.plain.byLayer)
+                            }
                     }
-                    .padding(.all, 10.0)
+                    .padding()
                     Button(action: {
                         if viewModel.musicPlayer.isPlaying {
                             viewModel.musicPlayer.pause()
@@ -47,43 +53,56 @@ struct MusicPlayerView: View {
                             viewModel.musicPlayer.resume()
                         }
                     }) {
-                        Image(systemName: viewModel.musicPlayer.isPlaying ? "pause.circle" : "play.circle")
-                            .resizable()
-                            .frame(width: Constants.buttonSize, height: Constants.buttonSize)
-                            .foregroundColor(Color.customOrange)
-                            .symbolEffect(.breathe.plain.byLayer)
+                            Image(systemName: viewModel.musicPlayer.isPlaying ? "pause.fill" : "play.square.fill")
+                                .resizable()
+                                .frame(width: Constants.buttonSize, height: Constants.buttonSize)
+                                .foregroundColor(Color.customOrange)
+                                .ifiOS18OrLater { view in
+                                    view.symbolEffect(.breathe.plain.byLayer)
+                                }
                     }
-                    .padding(.all, 10.0)
+                    .padding()
                     Button(action: { viewModel.musicPlayer.next() }) {
-                        Image(systemName: "forward.circle")
+                        Image(systemName: "chevron.forward.square.fill")
                             .resizable()
                             .frame(width: Constants.buttonSize, height: Constants.buttonSize)
                             .foregroundColor(Color.customOrange)
-                            .symbolEffect(.breathe.plain.byLayer)
+                            .ifiOS18OrLater { view in
+                                view.symbolEffect(.breathe.plain.byLayer)
+                            }
                     }
-                    .padding(.all, 10.0)
+                    .padding()
                     Button(action: {
-                        print("list!")
+                        showPlaylist.toggle()
                     }) {
-                        Image(systemName: "eject.circle")
+//                        Image(systemName: "music.note.list")
+                        Image("playlist-icon")
                             .resizable()
-                            .frame(width: Constants.buttonSize, height: Constants.buttonSize)
+                            .tint(Color.customOrange)
                             .foregroundColor(Color.customOrange)
-                            .symbolEffect(.breathe.plain.byLayer)
+                            .frame(width: Constants.buttonSize, height: Constants.buttonSize)
+                            .ifiOS18OrLater { view in
+                                view.symbolEffect(.breathe.plain.byLayer)
+                            }
                     }
-                    .padding(.all, 10.0)
+                    .padding()
                 }
-                ProgressView(value: viewModel.musicPlayer.playbackProgress)
             }
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.customCream) // Background color for the rounded rectangle
-                    .shadow(radius: 10) // Optional: Add a shadow for better visual effect
-            )
-
         }
+        .frame(maxWidth: .infinity)
         .padding()
-        .background(Color.clear)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.black)
+                .shadow(radius: 10)
+        )
+        .edgesIgnoringSafeArea(.all)
+        .sheet(isPresented: $showPlaylist) {
+            PlaylistView(viewModel: PlaylistViewModel())
+                .transition(.move(edge: .bottom))
+                .zIndex(1)
+                .presentationDetents([.medium, .large])
+        }
     }
 }
 
@@ -100,17 +119,9 @@ enum MusicPlayerState {
 
 class MusicPlayerViewModel: ObservableObject {
     @Published var musicPlayer = MusicPlayerManager.shared
-
-    var playingTitle: String {
-        return musicPlayer.currentSong?.title ?? ""
-    }
-    var playingArtist: String {
-        return musicPlayer.currentSong?.artist ?? ""
-    }
-
-    var showSongDetails: Bool {
-        return musicPlayer.currentSong != nil
-    }
+    @Published var songTitle: String = ""
+    @Published var songArtist: String = ""
+    private var cancellables = Set<AnyCancellable>()
 
     init() {
         musicPlayer.objectWillChange
@@ -119,7 +130,20 @@ class MusicPlayerViewModel: ObservableObject {
                 self?.objectWillChange.send() // Propagate changes to the view
             }
             .store(in: &cancellables)
+        setupObservers()
     }
 
-    private var cancellables = Set<AnyCancellable>()
+
+    func setupObservers() {
+        musicPlayer.$currentSong
+            .sink { _ in
+        } receiveValue: { song in
+            self.songTitle = song.title
+            self.songArtist = song.artist
+        }.store(in: &cancellables)
+    }
+
+    var showSongDetails: Bool {
+        return !songTitle.isEmpty || !songArtist.isEmpty
+    }
 }

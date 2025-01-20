@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+struct MyButtonStyle: PrimitiveButtonStyle {
+    @State private var isPressed = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .opacity(isPressed ? 0.6 : 1.0)
+            .scaleEffect(isPressed ? 3.0 : 1.0)
+            .animation(.spring(), value: isPressed)
+            .onLongPressGesture(
+                minimumDuration: 0,
+                perform: {
+                    // Trigger the button action
+                    configuration.trigger()
+
+                    // Animate the press effect
+                    withAnimation(.spring()) {
+                        isPressed = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            isPressed = false
+                        }
+                    }
+                }
+            )
+    }
+}
+
 struct CustomButton: View {
     let title: String
     let action: () -> Void

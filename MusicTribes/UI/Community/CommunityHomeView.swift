@@ -25,7 +25,11 @@ struct CommunityHomeView: View {
     
     var body: some View {
         ZStack() {
-            BackgroundMesh()
+            if #available(iOS 18.0, *) {
+                BackgroundMesh()
+            } else {
+                Color.black
+            }
             Color.black
                 .opacity(0.6)
             ScrollView(.vertical, showsIndicators: false) {
@@ -64,6 +68,18 @@ struct CommunityHomeView: View {
                                         )
                                     )
                                 )
+                                CollectorItemCrateView()
+                                    .environmentObject(CrateViewModel(
+                                        crateItems: vmCommunity.crateItems(),
+                                        crateConfig: CrateViewConfig(
+                                            showTextTop: false,
+                                            showTextBottom: true,
+                                            showCount: false,
+                                            crateOffset: 20.0,
+                                            maxItems: vmCommunity.data.count,
+                                            color: .customOrange
+                                        )
+                                    )
                                 .frame(
                                     width: UIScreen.main.bounds.width - UIConstants.frameBorder * 4,
                                     height: UIScreen.main.bounds.width - UIConstants.frameBorder * 4

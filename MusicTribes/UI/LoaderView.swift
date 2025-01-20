@@ -10,7 +10,7 @@ import SwiftUI
 struct LoaderView: View {
     var body: some View {
         ZStack {
-            BackgroundMesh()
+            BackgroundGradient()
             LogoView()
                 .frame(height: 200.0)
         }.edgesIgnoringSafeArea(.all)

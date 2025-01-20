@@ -23,7 +23,7 @@ struct LogoView: View {
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
-                .foregroundColor(.customGreen)
+               // .foregroundStyle(Color("LiveFontColor"))
                 .aspectRatio(contentMode: .fit)
                 .if(animateLogo) { view in
                     view

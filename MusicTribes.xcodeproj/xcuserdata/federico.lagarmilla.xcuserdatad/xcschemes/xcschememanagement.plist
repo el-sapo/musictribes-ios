@@ -4,20 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MusicActivityWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>MusicTribes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MusicTribesS copy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>MusicTribesS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0C41ECD92CD3C75300A35997</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C9C282D2D3B031F00976753</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0CE5795E2BF6F995006F1498</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CFE39062C1FC30B002A0BD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CFE39152C1FC30F002A0BD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CFE391F2C1FC30F002A0BD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

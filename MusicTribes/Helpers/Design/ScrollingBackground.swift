@@ -12,7 +12,7 @@ struct ScrollingBackground: View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 ForEach(0..<Int(geometry.size.height / UtilDimensions.screenHeight) + 1, id: \.self) { _ in
-                    Image("back-wood-2")
+                    Image("woo-back-1")
                         .resizable()
                         .scaledToFill()
                         .frame(width: UtilDimensions.screenHeight, height: UtilDimensions.screenHeight)

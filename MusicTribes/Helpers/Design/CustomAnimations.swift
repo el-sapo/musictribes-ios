@@ -144,7 +144,9 @@ struct TextTransition: Transition {
                 transaction.animation = .linear(duration: duration)
             }
         } body: { view in
-            view.textRenderer(renderer)
+            if #available(iOS 18.0, *) {
+                view.textRenderer(renderer)
+            }
         }
     }
 }
@@ -247,48 +249,55 @@ struct SpatialPressingGestureModifier: ViewModifier {
     func body(content: Content) -> some View {
         let gesture = SpatialPressingGesture(location: $currentLocation)
 
-        content
-            .gesture(gesture)
-            .onChange(of: currentLocation, initial: false) { _, location in
-                onPressingChanged(location)
-            }
-    }
-}
-
-struct SpatialPressingGesture: UIGestureRecognizerRepresentable {
-    final class Coordinator: NSObject, UIGestureRecognizerDelegate {
-        @objc
-        func gestureRecognizer(
-            _ gestureRecognizer: UIGestureRecognizer,
-            shouldRecognizeSimultaneouslyWith other: UIGestureRecognizer
-        ) -> Bool {
-            true
+        if #available(iOS 18.0, *) {
+            content
+                .gesture(gesture)
+                .onChange(of: currentLocation, initial: false) { _, location in
+                    onPressingChanged(location)
+                }
+        } else {
+            content
+                .onChange(of: currentLocation, initial: false) { _, location in
+                    onPressingChanged(location)
+                }
         }
     }
 
-    @Binding var location: CGPoint?
+    struct SpatialPressingGesture: UIGestureRecognizerRepresentable {
+        final class Coordinator: NSObject, UIGestureRecognizerDelegate {
+            @objc
+            func gestureRecognizer(
+                _ gestureRecognizer: UIGestureRecognizer,
+                shouldRecognizeSimultaneouslyWith other: UIGestureRecognizer
+            ) -> Bool {
+                true
+            }
+        }
 
-    func makeCoordinator(converter: CoordinateSpaceConverter) -> Coordinator {
-        Coordinator()
-    }
+        @Binding var location: CGPoint?
 
-    func makeUIGestureRecognizer(context: Context) -> UILongPressGestureRecognizer {
-        let recognizer = UILongPressGestureRecognizer()
-        recognizer.minimumPressDuration = 0
-        recognizer.delegate = context.coordinator
+        func makeCoordinator(converter: CoordinateSpaceConverter) -> Coordinator {
+            Coordinator()
+        }
 
-        return recognizer
-    }
+        func makeUIGestureRecognizer(context: Context) -> UILongPressGestureRecognizer {
+            let recognizer = UILongPressGestureRecognizer()
+            recognizer.minimumPressDuration = 0
+            recognizer.delegate = context.coordinator
 
-    func handleUIGestureRecognizerAction(
-        _ recognizer: UIGestureRecognizerType, context: Context) {
-            switch recognizer.state {
+            return recognizer
+        }
+
+        func handleUIGestureRecognizerAction(
+            _ recognizer: UIGestureRecognizerType, context: Context) {
+                switch recognizer.state {
                 case .began:
                     location = context.converter.localLocation
                 case .ended, .cancelled, .failed:
                     location = nil
                 default:
                     break
+                }
             }
-        }
     }
+}
