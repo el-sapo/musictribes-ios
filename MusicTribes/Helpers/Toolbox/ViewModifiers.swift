@@ -93,5 +93,17 @@ extension View {
             self
         }
     }
+
+    /// Applies the given transform if the current OS is iOS 18 or later.
+    /// - Parameters:
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `View` or the modified `View` if the current OS is iOS 18 or later.
+    @ViewBuilder func ifiOS18OrLater<Content: View>(_ transform: (Self) -> Content) -> some View {
+        if #available(iOS 18, *) {
+            transform(self)
+        } else {
+            self
+        }
+    }
 }
 

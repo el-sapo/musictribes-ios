@@ -21,7 +21,7 @@ struct ContentView: View {
                     .transition(.opacity)
             }
         }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 withAnimation {
                     vm.showLoader(false)
                 }

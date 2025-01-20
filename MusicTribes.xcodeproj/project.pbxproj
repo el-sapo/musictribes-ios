@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,10 +16,35 @@
 		0C1D41412C39B2DE004305DD /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
 		0C1D41472C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
 		0C1D41482C39B49E004305DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
+		0C23D3CF2CE31E5A0014C719 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C23D3CE2CE31E5A0014C719 /* ActivityKit.framework */; };
 		0C3F0F082C596863008A86DA /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F0F072C596863008A86DA /* ScrollingBackground.swift */; };
 		0C3F0F092C596863008A86DA /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F0F072C596863008A86DA /* ScrollingBackground.swift */; };
+		0C41ECCA2CD2971100A35997 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECC92CD2971100A35997 /* CarouselView.swift */; };
+		0C41ECCB2CD2971100A35997 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECC92CD2971100A35997 /* CarouselView.swift */; };
+		0C41ECD22CD32FD300A35997 /* MusicPlayerManager+Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */; };
+		0C41ECD32CD32FD300A35997 /* MusicPlayerManager+Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */; };
+		0C41ECDC2CD3C75300A35997 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C41ECDB2CD3C75300A35997 /* WidgetKit.framework */; };
+		0C41ECDE2CD3C75300A35997 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C41ECDD2CD3C75300A35997 /* SwiftUI.framework */; };
+		0C41ECEF2CD3C75600A35997 /* MusicActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0C41ECDA2CD3C75300A35997 /* MusicActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C41ECF62CD3CE8400A35997 /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
+		0C41ECF82CD4175200A35997 /* WidgetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECF72CD4174C00A35997 /* WidgetsHelper.swift */; };
+		0C41ECF92CD4175200A35997 /* WidgetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECF72CD4174C00A35997 /* WidgetsHelper.swift */; };
+		0C41ECFA2CD4288200A35997 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */; };
+		0C41ECFB2CD428B800A35997 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */; };
+		0C41ECFC2CD4F08500A35997 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9DC592C232BEA00701E6F /* Utils.swift */; };
+		0C41ED002CD5546E00A35997 /* MusicPlayerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECFF2CD5546400A35997 /* MusicPlayerIntent.swift */; };
+		0C41ED012CD5546E00A35997 /* MusicPlayerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECFF2CD5546400A35997 /* MusicPlayerIntent.swift */; };
+		0C41ED022CD5620D00A35997 /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D482C9925D00013313A /* MusicPlayerManager.swift */; };
+		0C41ED032CD5622100A35997 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D4B2C99260E0013313A /* Song.swift */; };
+		0C41ED042CD56ED600A35997 /* MusicPlayerManager+Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */; };
+		0C443D492C9925D00013313A /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D482C9925D00013313A /* MusicPlayerManager.swift */; };
+		0C443D4A2C9925D00013313A /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D482C9925D00013313A /* MusicPlayerManager.swift */; };
+		0C443D4C2C9926110013313A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D4B2C99260E0013313A /* Song.swift */; };
+		0C443D4D2C9926110013313A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D4B2C99260E0013313A /* Song.swift */; };
 		0C4459812C574D8300531B89 /* CrateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4459802C574D8300531B89 /* CrateData.swift */; };
 		0C4459822C574D8300531B89 /* CrateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4459802C574D8300531B89 /* CrateData.swift */; };
+		0C47ECF12CFA087A00867115 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47ECF02CFA087A00867115 /* PlaylistView.swift */; };
+		0C47ECF22CFA087A00867115 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47ECF02CFA087A00867115 /* PlaylistView.swift */; };
 		0C4D6D2F2C53DC3700373303 /* CollectorMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579762BF7049C006F1498 /* CollectorMainView.swift */; };
 		0C4D6D302C53DC4100373303 /* CollectorGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */; };
 		0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
@@ -42,8 +67,71 @@
 		0C960DEE2C228B28006CB1A6 /* ItemMenubar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DEC2C228B28006CB1A6 /* ItemMenubar.swift */; };
 		0C960DF02C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */; };
 		0C960DF12C228EAE006CB1A6 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */; };
+		0C9C28352D3B031F00976753 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */; };
+		0C9C28362D3B031F00976753 /* CrateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4459802C574D8300531B89 /* CrateData.swift */; };
+		0C9C28372D3B031F00976753 /* CommunityCrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */; };
+		0C9C28382D3B031F00976753 /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
+		0C9C28392D3B031F00976753 /* CollectorGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */; };
+		0C9C283A2D3B031F00976753 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */; };
+		0C9C283B2D3B031F00976753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE390B2C1FC30B002A0BD5 /* ContentView.swift */; };
+		0C9C283C2D3B031F00976753 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE92C228619006CB1A6 /* CustomButton.swift */; };
+		0C9C283D2D3B031F00976753 /* Ripple.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE62C227F74006CB1A6 /* Ripple.metal */; };
+		0C9C283E2D3B031F00976753 /* MusicTribesSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE39092C1FC30B002A0BD5 /* MusicTribesSApp.swift */; };
+		0C9C283F2D3B031F00976753 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F0F072C596863008A86DA /* ScrollingBackground.swift */; };
+		0C9C28402D3B031F00976753 /* CollectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E6EA12C060E3C003C577B /* CollectedItem.swift */; };
+		0C9C28412D3B031F00976753 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB63A342C33B2630086707C /* ViewHelpers.swift */; };
+		0C9C28422D3B031F00976753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE03652CCB578100A5A8F8 /* AppDelegate.swift */; };
+		0C9C28432D3B031F00976753 /* CollectorMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579762BF7049C006F1498 /* CollectorMainView.swift */; };
+		0C9C28442D3B031F00976753 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D4B2C99260E0013313A /* Song.swift */; };
+		0C9C28452D3B031F00976753 /* ItemMenubar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DEC2C228B28006CB1A6 /* ItemMenubar.swift */; };
+		0C9C28462D3B031F00976753 /* SongDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE035F2CCB561B00A5A8F8 /* SongDownloadManager.swift */; };
+		0C9C28472D3B031F00976753 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D41462C39B49E004305DD /* DataManager.swift */; };
+		0C9C28482D3B031F00976753 /* CollectorItemCrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579782BF7085E006F1498 /* CollectorItemCrateView.swift */; };
+		0C9C28492D3B031F00976753 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797C2BF70F47006F1498 /* MockData.swift */; };
+		0C9C284A2D3B031F00976753 /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE03622CCB568E00A5A8F8 /* PlaylistManager.swift */; };
+		0C9C284B2D3B031F00976753 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */; };
+		0C9C284C2D3B031F00976753 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579802BF70F68006F1498 /* Artist.swift */; };
+		0C9C284D2D3B031F00976753 /* CollectorItemCrateVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */; };
+		0C9C284E2D3B031F00976753 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECC92CD2971100A35997 /* CarouselView.swift */; };
+		0C9C284F2D3B031F00976753 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF49F92C5C9179001D9539 /* Community.swift */; };
+		0C9C28502D3B031F00976753 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47ECF02CFA087A00867115 /* PlaylistView.swift */; };
+		0C9C28512D3B031F00976753 /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579822BF70F70006F1498 /* Collector.swift */; };
+		0C9C28522D3B031F00976753 /* CollectorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3F4EA2D00FB4900E6CE9E /* CollectorSelectorView.swift */; };
+		0C9C28542D3B031F00976753 /* CollectedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */; };
+		0C9C28552D3B031F00976753 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */; };
+		0C9C28562D3B031F00976753 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9DC592C232BEA00701E6F /* Utils.swift */; };
+		0C9C28572D3B031F00976753 /* MusicPlayerManager+Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */; };
+		0C9C28582D3B031F00976753 /* BackgroundMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE32C2261EA006CB1A6 /* BackgroundMesh.swift */; };
+		0C9C28592D3B031F00976753 /* MusicPlayerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41ECFF2CD5546400A35997 /* MusicPlayerIntent.swift */; };
+		0C9C285A2D3B031F00976753 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C960DE02C226161006CB1A6 /* CustomAnimations.swift */; };
+		0C9C285B2D3B031F00976753 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */; };
+		0C9C285C2D3B031F00976753 /* CustomEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB8CC02C2D092A008061C2 /* CustomEffects.metal */; };
+		0C9C285D2D3B031F00976753 /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C443D482C9925D00013313A /* MusicPlayerManager.swift */; };
+		0C9C285E2D3B031F00976753 /* MusicTribesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */; };
+		0C9C28602D3B031F00976753 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C23D3CE2CE31E5A0014C719 /* ActivityKit.framework */; };
+		0C9C28612D3B031F00976753 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C9C28322D3B031F00976753 /* SDWebImageSwiftUI */; };
+		0C9C28622D3B031F00976753 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C9C28302D3B031F00976753 /* SDWebImage */; };
+		0C9C28642D3B031F00976753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE39102C1FC30D002A0BD5 /* Preview Assets.xcassets */; };
+		0C9C28652D3B031F00976753 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */; };
+		0C9C28662D3B031F00976753 /* scenes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB52C4CB5AF0075049A /* scenes.json */; };
+		0C9C28672D3B031F00976753 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE1CB82C12ACFF00211BBD /* artists.json */; };
+		0C9C28682D3B031F00976753 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A542C24607B00AA5D59 /* Gotham-Light.otf */; };
+		0C9C28692D3B031F00976753 /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A572C24607B00AA5D59 /* Gotham-UltraItalic.otf */; };
+		0C9C286A2D3B031F00976753 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A582C24607B00AA5D59 /* Gotham-XLight.otf */; };
+		0C9C286B2D3B031F00976753 /* danc3-songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C1D413F2C39B2DE004305DD /* danc3-songs.json */; };
+		0C9C286C2D3B031F00976753 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A522C24607B00AA5D59 /* Gotham-Bold.otf */; };
+		0C9C286D2D3B031F00976753 /* Gotham MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A502C24607B00AA5D59 /* Gotham MediumItalic.otf */; };
+		0C9C286E2D3B031F00976753 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A552C24607B00AA5D59 /* Gotham-Medium.otf */; };
+		0C9C286F2D3B031F00976753 /* Gotham BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A4F2C24607B00AA5D59 /* Gotham BoldItalic.otf */; };
+		0C9C28702D3B031F00976753 /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A512C24607B00AA5D59 /* Gotham-Black.otf */; };
+		0C9C28712D3B031F00976753 /* scenes-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C19ECB82C4CC3A50075049A /* scenes-2.json */; };
+		0C9C28722D3B031F00976753 /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A562C24607B00AA5D59 /* Gotham-ThinItalic.otf */; };
+		0C9C28732D3B031F00976753 /* Gotham-XLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A592C24607B00AA5D59 /* Gotham-XLightItalic.otf */; };
+		0C9C28742D3B031F00976753 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */; };
+		0C9C28752D3B031F00976753 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */; };
+		0C9C28762D3B031F00976753 /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */; };
+		0C9C28772D3B031F00976753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFE390D2C1FC30D002A0BD5 /* Assets.xcassets */; };
 		0CA60A9A2C21294B00FA31F4 /* CommunityHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A992C21294B00FA31F4 /* CommunityHomeView.swift */; };
-		0CA60A9B2C2129E300FA31F4 /* CommunityHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A992C21294B00FA31F4 /* CommunityHomeView.swift */; };
 		0CA60A9C2C213FC200FA31F4 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */; };
 		0CA60A9D2C21400300FA31F4 /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
 		0CA60A9E2C21400D00FA31F4 /* CollectorItemCrateVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE393E2C1FE12C002A0BD5 /* CollectorItemCrateVMProtocol.swift */; };
@@ -81,6 +169,8 @@
 		0CC33A732C24607B00AA5D59 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */; };
 		0CC33A742C24607B00AA5D59 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A532C24607B00AA5D59 /* Gotham-BookItalic.otf */; };
 		0CC33A752C24607B00AA5D59 /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */; };
+		0CD3F4EB2D00FB4900E6CE9E /* CollectorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3F4EA2D00FB4900E6CE9E /* CollectorSelectorView.swift */; };
+		0CD3F4EC2D00FB4900E6CE9E /* CollectorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3F4EA2D00FB4900E6CE9E /* CollectorSelectorView.swift */; };
 		0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579622BF6F995006F1498 /* MusicTribesApp.swift */; };
 		0CE579652BF6F995006F1498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579642BF6F995006F1498 /* ContentView.swift */; };
 		0CE579672BF6F997006F1498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE579662BF6F997006F1498 /* Assets.xcassets */; };
@@ -92,6 +182,11 @@
 		0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */; };
 		0CE579812BF70F68006F1498 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579802BF70F68006F1498 /* Artist.swift */; };
 		0CE579832BF70F70006F1498 /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE579822BF70F70006F1498 /* Collector.swift */; };
+		0CEE03602CCB562500A5A8F8 /* SongDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE035F2CCB561B00A5A8F8 /* SongDownloadManager.swift */; };
+		0CEE03612CCB562500A5A8F8 /* SongDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE035F2CCB561B00A5A8F8 /* SongDownloadManager.swift */; };
+		0CEE03632CCB569700A5A8F8 /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE03622CCB568E00A5A8F8 /* PlaylistManager.swift */; };
+		0CEE03642CCB569700A5A8F8 /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE03622CCB568E00A5A8F8 /* PlaylistManager.swift */; };
+		0CEE03662CCB578900A5A8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE03652CCB578100A5A8F8 /* AppDelegate.swift */; };
 		0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */; };
 		0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF84EFF2C11778A00453EAF /* Color+MT.swift */; };
 		0CF9DC5A2C232BED00701E6F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9DC592C232BEA00701E6F /* Utils.swift */; };
@@ -122,6 +217,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C41ECED2CD3C75600A35997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CE579572BF6F995006F1498 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C41ECD92CD3C75300A35997;
+			remoteInfo = MusicActivityWidgetExtension;
+		};
 		0CFE39172C1FC30F002A0BD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0CE579572BF6F995006F1498 /* Project object */;
@@ -138,14 +240,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C41ECF42CD3C75600A35997 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0C41ECEF2CD3C75600A35997 /* MusicActivityWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0C1971AF2BFDA04400BE28D2 /* MusicTribesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesAPI.swift; sourceTree = "<group>"; };
 		0C19ECB52C4CB5AF0075049A /* scenes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scenes.json; sourceTree = "<group>"; };
 		0C19ECB82C4CC3A50075049A /* scenes-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scenes-2.json"; sourceTree = "<group>"; };
 		0C1D413F2C39B2DE004305DD /* danc3-songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "danc3-songs.json"; sourceTree = "<group>"; };
 		0C1D41462C39B49E004305DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0C23D3CE2CE31E5A0014C719 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/ActivityKit.framework; sourceTree = DEVELOPER_DIR; };
 		0C3F0F072C596863008A86DA /* ScrollingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingBackground.swift; sourceTree = "<group>"; };
+		0C41ECC92CD2971100A35997 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		0C41ECCE2CD2D9B700A35997 /* MTLiveActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLiveActivities.swift; sourceTree = "<group>"; };
+		0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicPlayerManager+Activities.swift"; sourceTree = "<group>"; };
+		0C41ECDA2CD3C75300A35997 /* MusicActivityWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MusicActivityWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C41ECDB2CD3C75300A35997 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0C41ECDD2CD3C75300A35997 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0C41ECF72CD4174C00A35997 /* WidgetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsHelper.swift; sourceTree = "<group>"; };
+		0C41ECFD2CD4FBA900A35997 /* MusicTribesS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicTribesS.entitlements; sourceTree = "<group>"; };
+		0C41ECFE2CD4FBDF00A35997 /* MusicActivityWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicActivityWidgetExtension.entitlements; sourceTree = "<group>"; };
+		0C41ECFF2CD5546400A35997 /* MusicPlayerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerIntent.swift; sourceTree = "<group>"; };
+		0C443D482C9925D00013313A /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		0C443D4B2C99260E0013313A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		0C4459802C574D8300531B89 /* CrateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateData.swift; sourceTree = "<group>"; };
+		0C47ECF02CFA087A00867115 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		0C5E6EA12C060E3C003C577B /* CollectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedItem.swift; sourceTree = "<group>"; };
 		0C6E25A82C24C2EC00A7256D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		0C6E25AB2C24C33300A7256D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -155,6 +285,8 @@
 		0C960DE92C228619006CB1A6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0C960DEC2C228B28006CB1A6 /* ItemMenubar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenubar.swift; sourceTree = "<group>"; };
 		0C960DEF2C228EAE006CB1A6 /* CommonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonAssets.xcassets; sourceTree = "<group>"; };
+		0C9C287D2D3B031F00976753 /* MusicTribesS MAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicTribesS MAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9C287E2D3B032000976753 /* MusicTribesS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MusicTribesS copy-Info.plist"; path = "/Users/federico.lagarmilla/dev/fede/ios/musictribes/MusicTribes/MusicTribesS copy-Info.plist"; sourceTree = "<absolute>"; };
 		0CA60A992C21294B00FA31F4 /* CommunityHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHomeView.swift; sourceTree = "<group>"; };
 		0CA60A9F2C2145F200FA31F4 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
 		0CAB8CBC2C2D075F008061C2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
@@ -174,6 +306,7 @@
 		0CC33A5A2C24607B00AA5D59 /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
 		0CC33A5B2C24607B00AA5D59 /* GothamBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBook.ttf; sourceTree = "<group>"; };
 		0CC33A762C2466BB00AA5D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0CD3F4EA2D00FB4900E6CE9E /* CollectorSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorSelectorView.swift; sourceTree = "<group>"; };
 		0CE5795F2BF6F995006F1498 /* MusicTribes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTribes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE579622BF6F995006F1498 /* MusicTribesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTribesApp.swift; sourceTree = "<group>"; };
 		0CE579642BF6F995006F1498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -187,6 +320,9 @@
 		0CE5797E2BF70F5E006F1498 /* CollectedArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedArtist.swift; sourceTree = "<group>"; };
 		0CE579802BF70F68006F1498 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0CE579822BF70F70006F1498 /* Collector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
+		0CEE035F2CCB561B00A5A8F8 /* SongDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDownloadManager.swift; sourceTree = "<group>"; };
+		0CEE03622CCB568E00A5A8F8 /* PlaylistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistManager.swift; sourceTree = "<group>"; };
+		0CEE03652CCB578100A5A8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		0CF84EFF2C11778A00453EAF /* Color+MT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+MT.swift"; sourceTree = "<group>"; };
 		0CF9DC592C232BEA00701E6F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -206,7 +342,40 @@
 		0CFF49FC2C5CEF81001D9539 /* CommunityCrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCrateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0C41ECF02CD3C75600A35997 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0C41ECD92CD3C75300A35997 /* MusicActivityWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0C41ECDF2CD3C75300A35997 /* MusicActivityWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0C41ECF02CD3C75600A35997 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MusicActivityWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		0C41ECD72CD3C75300A35997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C41ECDE2CD3C75300A35997 /* SwiftUI.framework in Frameworks */,
+				0C41ECDC2CD3C75300A35997 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C9C285F2D3B031F00976753 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9C28602D3B031F00976753 /* ActivityKit.framework in Frameworks */,
+				0C9C28612D3B031F00976753 /* SDWebImageSwiftUI in Frameworks */,
+				0C9C28622D3B031F00976753 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE5795C2BF6F995006F1498 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +390,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C23D3CF2CE31E5A0014C719 /* ActivityKit.framework in Frameworks */,
 				0CFE393D2C1FDB92002A0BD5 /* SDWebImageSwiftUI in Frameworks */,
 				0CFE393B2C1FDB92002A0BD5 /* SDWebImage in Frameworks */,
 			);
@@ -252,6 +422,28 @@
 				0C19ECB52C4CB5AF0075049A /* scenes.json */,
 			);
 			path = mocks;
+			sourceTree = "<group>";
+		};
+		0C41ECCC2CD2D95B00A35997 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0C41ECFF2CD5546400A35997 /* MusicPlayerIntent.swift */,
+				0C41ECF72CD4174C00A35997 /* WidgetsHelper.swift */,
+				0C41ECD12CD32FC700A35997 /* MusicPlayerManager+Activities.swift */,
+				0C41ECCE2CD2D9B700A35997 /* MTLiveActivities.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		0C443D442C9925AA0013313A /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				0CEE03622CCB568E00A5A8F8 /* PlaylistManager.swift */,
+				0CEE035F2CCB561B00A5A8F8 /* SongDownloadManager.swift */,
+				0C443D4B2C99260E0013313A /* Song.swift */,
+				0C443D482C9925D00013313A /* MusicPlayerManager.swift */,
+			);
+			path = MusicPlayer;
 			sourceTree = "<group>";
 		};
 		0CA60A982C21293200FA31F4 /* Community */ = {
@@ -313,13 +505,16 @@
 		0CE579562BF6F995006F1498 = {
 			isa = PBXGroup;
 			children = (
+				0C41ECFE2CD4FBDF00A35997 /* MusicActivityWidgetExtension.entitlements */,
 				0CC33A4D2C24605800AA5D59 /* Resources */,
 				0CE579612BF6F995006F1498 /* MusicTribes */,
 				0CFE39082C1FC30B002A0BD5 /* MusicTribesS */,
 				0CFE39192C1FC30F002A0BD5 /* MusicTribesSTests */,
 				0CFE39232C1FC30F002A0BD5 /* MusicTribesSUITests */,
+				0C41ECDF2CD3C75300A35997 /* MusicActivityWidget */,
 				0CE579602BF6F995006F1498 /* Products */,
 				0CFE39392C1FDB86002A0BD5 /* Frameworks */,
+				0C9C287E2D3B032000976753 /* MusicTribesS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,6 +525,8 @@
 				0CFE39072C1FC30B002A0BD5 /* MusicTribesS.app */,
 				0CFE39162C1FC30F002A0BD5 /* MusicTribesSTests.xctest */,
 				0CFE39202C1FC30F002A0BD5 /* MusicTribesSUITests.xctest */,
+				0C41ECDA2CD3C75300A35997 /* MusicActivityWidgetExtension.appex */,
+				0C9C287D2D3B031F00976753 /* MusicTribesS MAC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +534,8 @@
 		0CE579612BF6F995006F1498 /* MusicTribes */ = {
 			isa = PBXGroup;
 			children = (
+				0C41ECCC2CD2D95B00A35997 /* Configuration */,
+				0C443D442C9925AA0013313A /* MusicPlayer */,
 				0CF9DC582C232BE300701E6F /* Helpers */,
 				0CE579732BF6FA4D006F1498 /* Domain */,
 				0CE579722BF6FA44006F1498 /* Data */,
@@ -361,6 +560,7 @@
 		0CE579712BF6FA3B006F1498 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0C41ECC92CD2971100A35997 /* CarouselView.swift */,
 				0CA60A982C21293200FA31F4 /* Community */,
 				0CF84EFB2C11730500453EAF /* MusicPlayer */,
 				0CE579752BF702E5006F1498 /* Collector */,
@@ -373,6 +573,7 @@
 		0CE579722BF6FA44006F1498 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C1D41462C39B49E004305DD /* DataManager.swift */,
 				0CFF49F92C5C9179001D9539 /* Community.swift */,
 				0C1D41422C39B2EA004305DD /* mocks */,
 				0CE5797C2BF70F47006F1498 /* MockData.swift */,
@@ -380,7 +581,6 @@
 				0CE579802BF70F68006F1498 /* Artist.swift */,
 				0CE579822BF70F70006F1498 /* Collector.swift */,
 				0C5E6EA12C060E3C003C577B /* CollectedItem.swift */,
-				0C1D41462C39B49E004305DD /* DataManager.swift */,
 				0C4459802C574D8300531B89 /* CrateData.swift */,
 			);
 			path = Data;
@@ -406,6 +606,7 @@
 			children = (
 				0CE579762BF7049C006F1498 /* CollectorMainView.swift */,
 				0CE5797A2BF70A75006F1498 /* CollectorGridView.swift */,
+				0CD3F4EA2D00FB4900E6CE9E /* CollectorSelectorView.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -414,6 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				0CF84EFC2C11732200453EAF /* MusicPlayerView.swift */,
+				0C47ECF02CFA087A00867115 /* PlaylistView.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -449,6 +651,8 @@
 		0CFE39082C1FC30B002A0BD5 /* MusicTribesS */ = {
 			isa = PBXGroup;
 			children = (
+				0C41ECFD2CD4FBA900A35997 /* MusicTribesS.entitlements */,
+				0CEE03652CCB578100A5A8F8 /* AppDelegate.swift */,
 				0CC33A762C2466BB00AA5D59 /* Info.plist */,
 				0CFE39092C1FC30B002A0BD5 /* MusicTribesSApp.swift */,
 				0CFE390B2C1FC30B002A0BD5 /* ContentView.swift */,
@@ -486,6 +690,9 @@
 		0CFE39392C1FDB86002A0BD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C23D3CE2CE31E5A0014C719 /* ActivityKit.framework */,
+				0C41ECDB2CD3C75300A35997 /* WidgetKit.framework */,
+				0C41ECDD2CD3C75300A35997 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -493,6 +700,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0C41ECD92CD3C75300A35997 /* MusicActivityWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C41ECF12CD3C75600A35997 /* Build configuration list for PBXNativeTarget "MusicActivityWidgetExtension" */;
+			buildPhases = (
+				0C41ECD62CD3C75300A35997 /* Sources */,
+				0C41ECD72CD3C75300A35997 /* Frameworks */,
+				0C41ECD82CD3C75300A35997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0C41ECDF2CD3C75300A35997 /* MusicActivityWidget */,
+			);
+			name = MusicActivityWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = MusicActivityWidgetExtension;
+			productReference = 0C41ECDA2CD3C75300A35997 /* MusicActivityWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0C9C282D2D3B031F00976753 /* MusicTribesS MAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C9C287A2D3B031F00976753 /* Build configuration list for PBXNativeTarget "MusicTribesS MAC" */;
+			buildPhases = (
+				0C9C28342D3B031F00976753 /* Sources */,
+				0C9C285F2D3B031F00976753 /* Frameworks */,
+				0C9C28632D3B031F00976753 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MusicTribesS MAC";
+			packageProductDependencies = (
+				0C9C28302D3B031F00976753 /* SDWebImage */,
+				0C9C28322D3B031F00976753 /* SDWebImageSwiftUI */,
+			);
+			productName = MusicTribesS;
+			productReference = 0C9C287D2D3B031F00976753 /* MusicTribesS MAC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0CE5795E2BF6F995006F1498 /* MusicTribes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE5796E2BF6F997006F1498 /* Build configuration list for PBXNativeTarget "MusicTribes" */;
@@ -522,10 +772,12 @@
 				0CFE39032C1FC30B002A0BD5 /* Sources */,
 				0CFE39042C1FC30B002A0BD5 /* Frameworks */,
 				0CFE39052C1FC30B002A0BD5 /* Resources */,
+				0C41ECF42CD3C75600A35997 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C41ECEE2CD3C75600A35997 /* PBXTargetDependency */,
 			);
 			name = MusicTribesS;
 			packageProductDependencies = (
@@ -579,9 +831,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					0C41ECD92CD3C75300A35997 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					0CE5795E2BF6F995006F1498 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -619,11 +874,47 @@
 				0CFE39062C1FC30B002A0BD5 /* MusicTribesS */,
 				0CFE39152C1FC30F002A0BD5 /* MusicTribesSTests */,
 				0CFE391F2C1FC30F002A0BD5 /* MusicTribesSUITests */,
+				0C41ECD92CD3C75300A35997 /* MusicActivityWidgetExtension */,
+				0C9C282D2D3B031F00976753 /* MusicTribesS MAC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C41ECD82CD3C75300A35997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C9C28632D3B031F00976753 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9C28642D3B031F00976753 /* Preview Assets.xcassets in Resources */,
+				0C9C28652D3B031F00976753 /* CommonAssets.xcassets in Resources */,
+				0C9C28662D3B031F00976753 /* scenes.json in Resources */,
+				0C9C28672D3B031F00976753 /* artists.json in Resources */,
+				0C9C28682D3B031F00976753 /* Gotham-Light.otf in Resources */,
+				0C9C28692D3B031F00976753 /* Gotham-UltraItalic.otf in Resources */,
+				0C9C286A2D3B031F00976753 /* Gotham-XLight.otf in Resources */,
+				0C9C286B2D3B031F00976753 /* danc3-songs.json in Resources */,
+				0C9C286C2D3B031F00976753 /* Gotham-Bold.otf in Resources */,
+				0C9C286D2D3B031F00976753 /* Gotham MediumItalic.otf in Resources */,
+				0C9C286E2D3B031F00976753 /* Gotham-Medium.otf in Resources */,
+				0C9C286F2D3B031F00976753 /* Gotham BoldItalic.otf in Resources */,
+				0C9C28702D3B031F00976753 /* Gotham-Black.otf in Resources */,
+				0C9C28712D3B031F00976753 /* scenes-2.json in Resources */,
+				0C9C28722D3B031F00976753 /* Gotham-ThinItalic.otf in Resources */,
+				0C9C28732D3B031F00976753 /* Gotham-XLightItalic.otf in Resources */,
+				0C9C28742D3B031F00976753 /* GothamBold.ttf in Resources */,
+				0C9C28752D3B031F00976753 /* Gotham-BookItalic.otf in Resources */,
+				0C9C28762D3B031F00976753 /* GothamBook.ttf in Resources */,
+				0C9C28772D3B031F00976753 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE5795D2BF6F995006F1498 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -695,16 +986,82 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C41ECD62CD3C75300A35997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C41ECF62CD3CE8400A35997 /* Color+MT.swift in Sources */,
+				0C41ECFA2CD4288200A35997 /* ViewExtensions.swift in Sources */,
+				0C41ECFB2CD428B800A35997 /* ViewModifiers.swift in Sources */,
+				0C41ED022CD5620D00A35997 /* MusicPlayerManager.swift in Sources */,
+				0C41ECFC2CD4F08500A35997 /* Utils.swift in Sources */,
+				0C41ECF92CD4175200A35997 /* WidgetsHelper.swift in Sources */,
+				0C41ED042CD56ED600A35997 /* MusicPlayerManager+Activities.swift in Sources */,
+				0C41ED012CD5546E00A35997 /* MusicPlayerIntent.swift in Sources */,
+				0C41ED032CD5622100A35997 /* Song.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C9C28342D3B031F00976753 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9C28352D3B031F00976753 /* ViewExtensions.swift in Sources */,
+				0C9C28362D3B031F00976753 /* CrateData.swift in Sources */,
+				0C9C28372D3B031F00976753 /* CommunityCrateView.swift in Sources */,
+				0C9C28382D3B031F00976753 /* Color+MT.swift in Sources */,
+				0C9C28392D3B031F00976753 /* CollectorGridView.swift in Sources */,
+				0C9C283A2D3B031F00976753 /* LoaderView.swift in Sources */,
+				0C9C283B2D3B031F00976753 /* ContentView.swift in Sources */,
+				0C9C283C2D3B031F00976753 /* CustomButton.swift in Sources */,
+				0C9C283D2D3B031F00976753 /* Ripple.metal in Sources */,
+				0C9C283E2D3B031F00976753 /* MusicTribesSApp.swift in Sources */,
+				0C9C283F2D3B031F00976753 /* ScrollingBackground.swift in Sources */,
+				0C9C28402D3B031F00976753 /* CollectedItem.swift in Sources */,
+				0C9C28412D3B031F00976753 /* ViewHelpers.swift in Sources */,
+				0C9C28422D3B031F00976753 /* AppDelegate.swift in Sources */,
+				0C9C28432D3B031F00976753 /* CollectorMainView.swift in Sources */,
+				0C9C28442D3B031F00976753 /* Song.swift in Sources */,
+				0C9C28452D3B031F00976753 /* ItemMenubar.swift in Sources */,
+				0C9C28462D3B031F00976753 /* SongDownloadManager.swift in Sources */,
+				0C9C28472D3B031F00976753 /* DataManager.swift in Sources */,
+				0C9C28482D3B031F00976753 /* CollectorItemCrateView.swift in Sources */,
+				0C9C28492D3B031F00976753 /* MockData.swift in Sources */,
+				0C9C284A2D3B031F00976753 /* PlaylistManager.swift in Sources */,
+				0C9C284B2D3B031F00976753 /* CommunityDetailView.swift in Sources */,
+				0C9C284C2D3B031F00976753 /* Artist.swift in Sources */,
+				0C9C284D2D3B031F00976753 /* CollectorItemCrateVMProtocol.swift in Sources */,
+				0C9C284E2D3B031F00976753 /* CarouselView.swift in Sources */,
+				0C9C284F2D3B031F00976753 /* Community.swift in Sources */,
+				0C9C28502D3B031F00976753 /* PlaylistView.swift in Sources */,
+				0C9C28512D3B031F00976753 /* Collector.swift in Sources */,
+				0C9C28522D3B031F00976753 /* CollectorSelectorView.swift in Sources */,
+				0C9C28542D3B031F00976753 /* CollectedArtist.swift in Sources */,
+				0C9C28552D3B031F00976753 /* ViewModifiers.swift in Sources */,
+				0C9C28562D3B031F00976753 /* Utils.swift in Sources */,
+				0C9C28572D3B031F00976753 /* MusicPlayerManager+Activities.swift in Sources */,
+				0C9C28582D3B031F00976753 /* BackgroundMesh.swift in Sources */,
+				0C9C28592D3B031F00976753 /* MusicPlayerIntent.swift in Sources */,
+				0C9C285A2D3B031F00976753 /* CustomAnimations.swift in Sources */,
+				0C9C285B2D3B031F00976753 /* MusicPlayerView.swift in Sources */,
+				0C9C285C2D3B031F00976753 /* CustomEffects.metal in Sources */,
+				0C9C285D2D3B031F00976753 /* MusicPlayerManager.swift in Sources */,
+				0C9C285E2D3B031F00976753 /* MusicTribesAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE5795B2BF6F995006F1498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0CE579792BF7085E006F1498 /* CollectorItemCrateView.swift in Sources */,
+				0CD3F4EB2D00FB4900E6CE9E /* CollectorSelectorView.swift in Sources */,
 				0C4459822C574D8300531B89 /* CrateData.swift in Sources */,
 				0CFF49FE2C5CEF81001D9539 /* CommunityCrateView.swift in Sources */,
 				0CE5797D2BF70F47006F1498 /* MockData.swift in Sources */,
 				0CFE393F2C1FE12E002A0BD5 /* CollectorItemCrateVMProtocol.swift in Sources */,
 				0CE5797B2BF70A75006F1498 /* CollectorGridView.swift in Sources */,
+				0C47ECF12CFA087A00867115 /* PlaylistView.swift in Sources */,
 				0C960DEA2C228619006CB1A6 /* CustomButton.swift in Sources */,
 				0C5E6EA22C060E3C003C577B /* CollectedItem.swift in Sources */,
 				0CE5797F2BF70F5E006F1498 /* CollectedArtist.swift in Sources */,
@@ -713,23 +1070,29 @@
 				0CE579772BF7049C006F1498 /* CollectorMainView.swift in Sources */,
 				0CA60AA02C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,
 				0C6E25AC2C24C33700A7256D /* ViewExtensions.swift in Sources */,
+				0C443D4D2C9926110013313A /* Song.swift in Sources */,
 				0C960DE52C2261FB006CB1A6 /* BackgroundMesh.swift in Sources */,
 				0CE579832BF70F70006F1498 /* Collector.swift in Sources */,
+				0CEE03612CCB562500A5A8F8 /* SongDownloadManager.swift in Sources */,
 				0CE579652BF6F995006F1498 /* ContentView.swift in Sources */,
 				0CE579812BF70F68006F1498 /* Artist.swift in Sources */,
 				0C6E25AA2C24C2F100A7256D /* ViewModifiers.swift in Sources */,
+				0CEE03642CCB569700A5A8F8 /* PlaylistManager.swift in Sources */,
 				0C960DE22C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
 				0C1D41482C39B49E004305DD /* DataManager.swift in Sources */,
 				0CF84EFD2C11732200453EAF /* MusicPlayerView.swift in Sources */,
+				0C41ECCB2CD2971100A35997 /* CarouselView.swift in Sources */,
 				0CFF49FA2C5C9180001D9539 /* Community.swift in Sources */,
 				0CAB8CC12C2D092A008061C2 /* CustomEffects.metal in Sources */,
 				0CE579632BF6F995006F1498 /* MusicTribesApp.swift in Sources */,
 				0C960DE82C227F74006CB1A6 /* Ripple.metal in Sources */,
 				0CB63A352C33B2630086707C /* ViewHelpers.swift in Sources */,
+				0C41ECD32CD32FD300A35997 /* MusicPlayerManager+Activities.swift in Sources */,
 				0C1971B02BFDA04400BE28D2 /* MusicTribesAPI.swift in Sources */,
 				0C960DEE2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
 				0CAB8CBD2C2D075F008061C2 /* LoaderView.swift in Sources */,
 				0CF84F002C11778A00453EAF /* Color+MT.swift in Sources */,
+				0C443D492C9925D00013313A /* MusicPlayerManager.swift in Sources */,
 				0CA60A9A2C21294B00FA31F4 /* CommunityHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,24 +1114,34 @@
 				0C3F0F082C596863008A86DA /* ScrollingBackground.swift in Sources */,
 				0CFE39332C1FDA60002A0BD5 /* CollectedItem.swift in Sources */,
 				0CB63A362C33B2630086707C /* ViewHelpers.swift in Sources */,
+				0CEE03662CCB578900A5A8F8 /* AppDelegate.swift in Sources */,
 				0C4D6D2F2C53DC3700373303 /* CollectorMainView.swift in Sources */,
-				0CA60A9B2C2129E300FA31F4 /* CommunityHomeView.swift in Sources */,
+				0C443D4C2C9926110013313A /* Song.swift in Sources */,
 				0C960DED2C228B28006CB1A6 /* ItemMenubar.swift in Sources */,
+				0CEE03602CCB562500A5A8F8 /* SongDownloadManager.swift in Sources */,
 				0C1D41472C39B49E004305DD /* DataManager.swift in Sources */,
 				0CFE39382C1FDA82002A0BD5 /* CollectorItemCrateView.swift in Sources */,
 				0CFE39342C1FDA60002A0BD5 /* MockData.swift in Sources */,
+				0CEE03632CCB569700A5A8F8 /* PlaylistManager.swift in Sources */,
 				0CA60AA12C2145F200FA31F4 /* CommunityDetailView.swift in Sources */,
 				0CFE39352C1FDA60002A0BD5 /* Artist.swift in Sources */,
 				0CA60A9E2C21400D00FA31F4 /* CollectorItemCrateVMProtocol.swift in Sources */,
+				0C41ECCA2CD2971100A35997 /* CarouselView.swift in Sources */,
 				0CFF49FB2C5C9180001D9539 /* Community.swift in Sources */,
+				0C47ECF22CFA087A00867115 /* PlaylistView.swift in Sources */,
 				0CFE39362C1FDA60002A0BD5 /* Collector.swift in Sources */,
+				0CD3F4EC2D00FB4900E6CE9E /* CollectorSelectorView.swift in Sources */,
+				0C41ECF82CD4175200A35997 /* WidgetsHelper.swift in Sources */,
 				0CFE39372C1FDA60002A0BD5 /* CollectedArtist.swift in Sources */,
 				0C6E25A92C24C2F100A7256D /* ViewModifiers.swift in Sources */,
 				0CF9DC5A2C232BED00701E6F /* Utils.swift in Sources */,
+				0C41ECD22CD32FD300A35997 /* MusicPlayerManager+Activities.swift in Sources */,
 				0C960DE42C2261FB006CB1A6 /* BackgroundMesh.swift in Sources */,
+				0C41ED002CD5546E00A35997 /* MusicPlayerIntent.swift in Sources */,
 				0C960DE12C22616C006CB1A6 /* CustomAnimations.swift in Sources */,
 				0CA60A9C2C213FC200FA31F4 /* MusicPlayerView.swift in Sources */,
 				0CAB8CC22C2D092A008061C2 /* CustomEffects.metal in Sources */,
+				0C443D4A2C9925D00013313A /* MusicPlayerManager.swift in Sources */,
 				0CFE39312C1FDA59002A0BD5 /* MusicTribesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +1166,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C41ECEE2CD3C75600A35997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C41ECD92CD3C75300A35997 /* MusicActivityWidgetExtension */;
+			targetProxy = 0C41ECED2CD3C75600A35997 /* PBXContainerItemProxy */;
+		};
 		0CFE39182C1FC30F002A0BD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0CFE39062C1FC30B002A0BD5 /* MusicTribesS */;
@@ -806,6 +1184,150 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C41ECF22CD3C75600A35997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MusicActivityWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicActivityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicActivityWidget;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes.MusicActivityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C41ECF32CD3C75600A35997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MusicActivityWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicActivityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicActivityWidget;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes.MusicActivityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C9C287B2D3B031F00976753 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicTribesS/MusicTribesS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"MusicTribesS/Preview Content\"";
+				DEVELOPMENT_TEAM = FL79WTB4NH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MusicTribesS copy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		0C9C287C2D3B031F00976753 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicTribesS/MusicTribesS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"MusicTribesS/Preview Content\"";
+				DEVELOPMENT_TEAM = FL79WTB4NH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MusicTribesS copy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0CE5796C2BF6F997006F1498 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -947,12 +1469,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.musictribes.main;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribesS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -988,12 +1510,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.musictribes.main;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribesS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1009,28 +1531,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicTribesS/MusicTribesS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicTribesS/Preview Content\"";
-				DEVELOPMENT_TEAM = 3QYW937A2Z;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicTribesS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribesS;
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1042,28 +1570,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicTribesS/MusicTribesS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicTribesS/Preview Content\"";
-				DEVELOPMENT_TEAM = 3QYW937A2Z;
+				DEVELOPMENT_TEAM = FL79WTB4NH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicTribesS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "MusicTribes+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribesS;
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagarmilla.MusicTribes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1154,6 +1688,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C41ECF12CD3C75600A35997 /* Build configuration list for PBXNativeTarget "MusicActivityWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C41ECF22CD3C75600A35997 /* Debug */,
+				0C41ECF32CD3C75600A35997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C9C287A2D3B031F00976753 /* Build configuration list for PBXNativeTarget "MusicTribesS MAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C9C287B2D3B031F00976753 /* Debug */,
+				0C9C287C2D3B031F00976753 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0CE5795A2BF6F995006F1498 /* Build configuration list for PBXProject "MusicTribes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1218,6 +1770,22 @@
 				minimumVersion = 3.0.4;
 			};
 		};
+		0C9C28312D3B031F00976753 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.3;
+			};
+		};
+		0C9C28332D3B031F00976753 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1234,6 +1802,16 @@
 		0C684BA92C12C1F3000E1BF7 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0C684BA82C12C1F3000E1BF7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		0C9C28302D3B031F00976753 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C9C28312D3B031F00976753 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		0C9C28322D3B031F00976753 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C9C28332D3B031F00976753 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 		0CFE393A2C1FDB92002A0BD5 /* SDWebImage */ = {

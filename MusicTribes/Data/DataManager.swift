@@ -19,6 +19,11 @@ struct DataConstants {
 }
 
 class DataManager {
+    static let shared = DataManager()
+    private var cancellables = Set<AnyCancellable>()
+
+    let mtAPI = MusicTribesAPI()
+
     static func dataForType(_ dataType: DataType = .mixtape) -> Future<[CollectedArtist], Error> {
         return Future { promise in
             DispatchQueue.global().async {
@@ -26,6 +31,26 @@ class DataManager {
                 promise(.success(collectedArtists))
             }
         }
+    }
+
+    func remoteDataForCollector(_ collector: String) -> Future<[CollectedArtist], Error> {
+        return Future { promise in
+            self.mtAPI.fetchSongsForCollector(collector)
+                .map { songs in
+                    return groupSongsByArtist(songs: songs)
+                }
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .failure(let error):
+                        promise(.failure(error))
+                    case .finished:
+                        break
+                    }
+                }, receiveValue: { collectedArtists in
+                    promise(.success(collectedArtists))
+                })
+                .store(in: &self.cancellables)
+        }         
     }
 }
 
@@ -57,7 +82,7 @@ func loadJSONFromMixtapeFile(fileName: String) -> [CollectedArtist]? {
 
     // Convert data to string to print it
     if let jsonString = String(data: data, encoding: .utf8) {
-        print("Loaded JSON data:\n\(jsonString)")
+        print("Loaded loadJSONFromMixtapeFile")
     } else {
         print("Failed to convert data to string.")
         return nil
@@ -101,7 +126,7 @@ func loadArtistJSONFromFile(_ dataType: DataType = .mixtape, fileName: String) -
 
                 // Print the decoded data
                 for song in songs {
-                    print("Artist: \(song.artist), Title: \(song.title)")
+//                    print("Artist: \(song.artist), Title: \(song.title)")
                 }
 
                 let artists = groupSongsByArtist(songs: songs)
@@ -162,21 +187,6 @@ func loadArtistJSONFromFile(_ dataType: DataType = .mixtape, fileName: String) -
         }
 
         return collectedArtists
-    }
-
-    struct Song: Codable, Hashable {
-        let artist: String
-        let artistId: String
-        let coverImage: String
-        let title: String
-        let description: String?
-        let songUrl: String
-        let webappUri: String
-        let artistAvatarUrl: String
-        let twitterHandle: String
-        let instagramHandle: String
-        let spotifyUrl: String
-        let createdAtTime: String
     }
 }
 

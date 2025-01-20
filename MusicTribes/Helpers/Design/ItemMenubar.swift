@@ -18,7 +18,9 @@ struct ItemMenubar: View {
                 Image(systemName: "play")
                     .imageScale(.large)
                     .foregroundStyle(baseColor)
-                    .symbolEffect(.breathe.plain.byLayer)
+                    .ifiOS18OrLater { view in
+                        view.symbolEffect(.breathe.plain.byLayer)
+                    }
             }
             Spacer()
             Button(action: {
@@ -27,7 +29,9 @@ struct ItemMenubar: View {
                 Image(systemName: "plus")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
-                    .symbolEffect(.breathe.plain.byLayer)
+                    .ifiOS18OrLater { view in
+                        view.symbolEffect(.breathe.plain.byLayer)
+                    }
             }
             Spacer()
             Button(action: {
@@ -36,7 +40,9 @@ struct ItemMenubar: View {
                 Image(systemName: "square.and.arrow.up")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
-                    .symbolEffect(.breathe.plain.byLayer)
+                    .ifiOS18OrLater { view in
+                        view.symbolEffect(.breathe.plain.byLayer)
+                    }
             }
             Spacer()
             Button(action: {
@@ -45,7 +51,9 @@ struct ItemMenubar: View {
                 Image(systemName: "sparkles")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
-                    .symbolEffect(.breathe.plain.byLayer)
+                    .ifiOS18OrLater { view in
+                        view.symbolEffect(.breathe.plain.byLayer)
+                    }
             }
             Spacer()
         }.opacity(0.7)
